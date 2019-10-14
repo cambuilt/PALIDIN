@@ -15,7 +15,9 @@ class DocReaderMainViewController: UIViewController {
 
     var alertController: UIAlertController?
     var spinnerIndicator: UIActivityIndicatorView?
-    
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var buttonID: UIButton!
+  
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         super.viewWillAppear(animated)
@@ -31,6 +33,7 @@ class DocReaderMainViewController: UIViewController {
     @IBAction func startCameraCaptureBtnPressed(_ sender: UIButton) {
 
         let dispatchViewController = self.storyboard?.instantiateViewController(withIdentifier: "DispatchViewController") as! DocReaderDispatchViewController
+
         dispatchViewController.setDocumentProofCaptureCallback { (success, message, docProofCapturedMessage) in
             if success {
                 if let docProofCapturedMessage = docProofCapturedMessage {
@@ -77,7 +80,7 @@ class DocReaderMainViewController: UIViewController {
         let resultContainerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultContainerViewController") as! ResultContainerViewController
         resultContainerViewController.documentAuthenticationResponse = documentAuthenticationResponse
         resultContainerViewController.navigationItem.rightBarButtonItem = nil
-        self.navigationController?.pushViewController(resultContainerViewController, animated: true)
+        self.navigationController?.pushViewController(resultContainerViewController, animated: false)
     }
     
     func showAlert(status: String, error: Bool) {
