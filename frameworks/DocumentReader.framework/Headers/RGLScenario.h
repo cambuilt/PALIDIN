@@ -1,0 +1,39 @@
+#import <Foundation/Foundation.h>
+
+typedef NS_ENUM(NSInteger, RGLDocReaderFrame) {
+    RGLDocReaderFrameScenarioDefault = 0,
+    RGLDocReaderFrameMax = 1,
+    RGLDocReaderFrameNone = 2
+};
+
+typedef NS_ENUM(NSInteger, RGLDocReaderOrientation) {
+    RGLDocReaderOrientationRotate = 0,
+    RGLDocReaderOrientationPortrait = 1,
+    RGLDocReaderOrientationLandscape = 2
+};
+
+typedef NS_ENUM(NSInteger, RGLCameraFrameShapeType) {
+    RGLCameraFrameShapeTypeLine,
+    RGLCameraFrameShapeTypeCorners
+};
+
+@interface RGLScenario : NSObject
+
+@property(nonatomic, strong, readonly, nonnull) NSString *identifier;
+@property(nonatomic, assign, readonly) RGLDocReaderFrame frame;
+@property(nonatomic, assign, readonly) double frameKWHLandscape;
+@property(nonatomic, assign, readonly) double frameKWHPortrait;
+@property(nonatomic, strong, readonly, nonnull) NSString *scenarioDescription;
+@property(nonatomic, assign, readonly) BOOL barcodeExt;
+@property(nonatomic, assign, readonly) BOOL faceExt;
+@property(nonatomic, assign, readonly) BOOL multiPageOff;
+@property(nonatomic, strong, readonly, nonnull) NSString *caption;
+@property(nonatomic, assign, readonly) BOOL uvTorch;
+@property(nonatomic, assign, readonly) RGLDocReaderOrientation frameOrientation;
+
+- (instancetype _Nonnull)initWithIdentifier:(NSString *_Nonnull)identifier frame:(RGLDocReaderFrame)frame frameKWHLandscape:(double)frameKWHLandscape frameKWHPortrait:(double)frameKWHPortrait scenarioDescription:(NSString *_Nonnull)scenarioDescription barcodeExt:(BOOL)barcodeExt faceExt:(BOOL)faceExt multiPageOff:(BOOL)multiPageOff caption:(NSString *_Nonnull)caption uvTorch:(BOOL)uvTorch frameOrientation:(RGLDocReaderOrientation)frameOrientation;
+- (instancetype _Nonnull)initWithJSON:(NSDictionary *_Nonnull)json;
++ (instancetype _Nonnull)initWithJSON:(NSDictionary * _Nonnull)json;
++ (NSArray * _Nullable)arrayFromJSON:(NSDictionary * _Nonnull)json;
+
+@end
