@@ -1,8 +1,9 @@
 #import <Foundation/Foundation.h>
-#import "RGLRfidNotify.h"
+#import "RGLRFIDNotify.h"
 
 @class RGLAccessControlProcedureType, RGLApplication, RGLSecurityObject, RGLCardProperties;
 
+NS_SWIFT_NAME(RFIDSessionData)
 @interface RGLRFIDSessionData : NSObject
 
 @property(nonatomic, strong, readonly, nonnull) NSArray <RGLAccessControlProcedureType *> *accessControls;
@@ -11,11 +12,11 @@
 @property(nonatomic, strong, readonly, nonnull) RGLCardProperties *cardProperties;
 @property(nonatomic, assign, readonly) NSInteger totalBytesReceived;
 @property(nonatomic, assign, readonly) NSInteger totalBytesSent;
-@property(nonatomic, assign, readonly) RGLRfidErrorCodes status;
-@property(nonatomic, assign, readonly) RGLRfidErrorCodes extLeSupport;
+@property(nonatomic, assign, readonly) RGLRFIDErrorCodes status;
+@property(nonatomic, assign, readonly) RGLRFIDErrorCodes extLeSupport;
 @property(nonatomic, assign, readonly) double processTime;
 
-- (nullable instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull)init NS_UNAVAILABLE;
 - (instancetype _Nonnull)initWithJSON:(NSDictionary *_Nonnull)json;
 + (instancetype _Nonnull)initWithJSON:(NSDictionary * _Nonnull)json;
 

@@ -4,10 +4,11 @@
 
 @class RGLElementRect;
 
+NS_SWIFT_NAME(PhotoIdentResult)
 @interface RGLPhotoIdentResult : RGLAuthenticityElement
 
 @property(nonatomic, strong, readonly, nonnull) RGLElementRect *area;
-@property(nonatomic, assign, readonly) RGLLightType lightIndex;
+@property(nonatomic, assign, readonly) RGLGraphicFieldLight lightIndex;
 @property(nonatomic, assign, readonly) NSInteger reserved1;
 @property(nonatomic, assign, readonly) NSInteger reserved2;
 @property(nonatomic, assign, readonly) NSInteger reserved3;

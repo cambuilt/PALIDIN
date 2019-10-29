@@ -2,11 +2,12 @@
 
 @class RGLCertificateData;
 
+NS_SWIFT_NAME(SecurityObjectCertificates)
 @interface RGLSecurityObjectCertificates : NSObject
 
 @property(nonatomic, strong, readonly, nonnull) RGLCertificateData *securityObject;
 
-- (nullable instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull)init NS_UNAVAILABLE;
 - (instancetype _Nonnull)initWithJSON:(NSDictionary *_Nonnull)json;
 + (instancetype _Nonnull)initWithJSON:(NSDictionary * _Nonnull)json;
 

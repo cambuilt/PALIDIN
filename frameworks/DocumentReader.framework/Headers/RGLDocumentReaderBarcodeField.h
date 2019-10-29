@@ -4,6 +4,7 @@
 
 @class RGLPDF417Info;
 
+NS_SWIFT_NAME(DocumentReaderBarcodeField)
 @interface RGLDocumentReaderBarcodeField : NSObject
 
 @property(nonatomic, assign, readonly) RGLBarcodeType barcodeType;
@@ -12,7 +13,7 @@
 @property(nonatomic, strong, readonly, nonnull) NSData *data;
 @property(nonatomic, assign, readonly) NSInteger pageIndex;
 
-- (nullable instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull)init NS_UNAVAILABLE;
 - (instancetype _Nonnull)initWithJSON:(NSDictionary *_Nonnull)json;
 + (instancetype _Nonnull)initWithJSON:(NSDictionary * _Nonnull)json;
 

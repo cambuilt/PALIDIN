@@ -14,8 +14,8 @@ import Foundation
 class CommonConstants {
 
     static let BASE_SERVER_HOST = "https://auth.aware.com:8443/BioSP/rest"
-    static let serviceUsername = "integuser100"
-    static let servicePassword = "XCV673!"
+    static let serviceUsername = "knomi"
+    static let servicePassword = "NVU!497#"
     
     static let DOC_AUTH_SERVICE_BASE = BASE_SERVER_HOST + "/documentAuthenticationService"
     static let VERIFY_DOCUMENTS_AND_BIOMETRICS_URL = DOC_AUTH_SERVICE_BASE + "/verifyDocumentsAndBiometrics"

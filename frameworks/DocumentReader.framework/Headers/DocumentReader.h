@@ -23,13 +23,14 @@ FOUNDATION_EXPORT const unsigned char DocumentReaderVersionString[];
 #import <DocumentReader/RGLDocumentPosition.h>
 #import <DocumentReader/RGLBarcodePosition.h>
 #import <DocumentReader/RGLImageQualityGroup.h>
+#import <DocumentReader/RGLImageQuality.h>
 #import <DocumentReader/RGLDocumentReaderAuthenticityResult.h>
 #import <DocumentReader/RGLRFIDSessionData.h>
-#import <DocumentReader/RGLRfidNotify.h>
+#import <DocumentReader/RGLRFIDNotify.h>
 #import <DocumentReader/RGLDocumentReaderTextField.h>
 #import <DocumentReader/RGLDocumentReaderGraphicField.h>
 #import <DocumentReader/RGLDocumentReaderValue.h>
-#import <DocumentReader/RGLRfidScenario.h>
+#import <DocumentReader/RGLRFIDScenario.h>
 #import <DocumentReader/RGLProcessParams.h>
 #import <DocumentReader/RGLDataGroup.h>
 #import <DocumentReader/RGLDocReaderDocumentsDatabase.h>
@@ -43,7 +44,7 @@ FOUNDATION_EXPORT const unsigned char DocumentReaderVersionString[];
 #import <DocumentReader/RGLSignerInfo.h>
 #import <DocumentReader/RGLAuthority.h>
 #import <DocumentReader/RGLAttribute.h>
-#import <DocumentReader/RGLRfidValue.h>
+#import <DocumentReader/RGLRFIDValue.h>
 #import <DocumentReader/RGLExtension.h>
 #import <DocumentReader/RGLCertificateChain.h>
 #import <DocumentReader/RGLValidity.h>
@@ -57,6 +58,11 @@ FOUNDATION_EXPORT const unsigned char DocumentReaderVersionString[];
 #import <DocumentReader/RGLDocumentReaderBarcodeResult.h>
 #import <DocumentReader/RGLDocumentReaderBarcodeField.h>
 #import <DocumentReader/RGLPDF417Info.h>
+#import <DocumentReader/RGLCornerView.h>
+#import <DocumentReader/RGLPreviewView.h>
+#import <DocumentReader/RGLMaskView.h>
+#import <DocumentReader/RGLActivityIndicator.h>
+#import <DocumentReader/RGLDocumentView.h>
 
 #import <DocumentReader/RGLFunctionality.h>
 #import <DocumentReader/RGLCustomization.h>

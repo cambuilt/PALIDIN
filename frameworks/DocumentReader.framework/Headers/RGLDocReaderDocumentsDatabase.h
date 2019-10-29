@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 
+NS_SWIFT_NAME(DocReaderDocumentsDatabase)
 @interface RGLDocReaderDocumentsDatabase : NSObject
 
 @property (nonatomic, strong, readonly, nullable) NSString *databaseID;

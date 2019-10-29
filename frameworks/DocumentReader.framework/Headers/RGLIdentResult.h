@@ -4,6 +4,7 @@
 
 @class RGLElementRect;
 
+NS_SWIFT_NAME(IdentResult)
 @interface RGLIdentResult : RGLAuthenticityElement
 
 @property(nonatomic, strong, readonly, nonnull) UIImage *etalonImage;

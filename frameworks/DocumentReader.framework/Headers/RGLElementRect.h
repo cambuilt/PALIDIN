@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 
+NS_SWIFT_NAME(ElementRect)
 @interface RGLElementRect : NSObject
 
 @property(nonatomic, assign, readonly) NSInteger bottom;

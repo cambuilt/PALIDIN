@@ -47,7 +47,7 @@ class ResultTextDataViewController: UIViewController, IndicatorInfoProvider,  UI
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (fieldTypes?.count)!
+         return (fieldTypes?.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,17 +56,14 @@ class ResultTextDataViewController: UIViewController, IndicatorInfoProvider,  UI
         let fieldType = self.fieldTypes![indexPath.row]
         cell.fieldTypeNameLabel.text = fieldType.name!
         cell.barcodeLabel.text = fieldType.fieldResult?.barcode != nil ? fieldType.fieldResult?.barcode! : ""
-        cell.barcodeLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         cell.ocrLabel.text = fieldType.fieldResult?.visual != nil ? fieldType.fieldResult?.visual! : ""
-        cell.ocrLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cell.barcodeOCRMatchingLabel.text = (fieldType.fieldResult?.visualBarcodeCompareValid == FieldComparisonResult.COMPARE_TRUE.rawValue) ? "✅" : (fieldType.fieldResult?.visualBarcodeCompareValid == FieldComparisonResult.COMPARE_FALSE.rawValue) ? "❌" : "❔"
-        cell.barcodeLabel.textColor = (fieldType.fieldResult?.isBarcodeStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : UIColor.black
-        cell.barcodeLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cell.ocrLabel.textColor = (fieldType.fieldResult?.isVisualStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : UIColor.black
-        cell.ocrLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cell.isValidLabel.text = (fieldType.overallResult == AuthenticationResult.OK.rawValue) ? "✅" : (fieldType.overallResult == AuthenticationResult.FAILED.rawValue) ? "❌" : "❔"
         cell.isValidLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
+        cell.fieldTypeNameLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        cell.barcodeOCRMatchingLabel.text = (fieldType.fieldResult?.visualBarcodeCompareValid == FieldComparisonResult.COMPARE_TRUE.rawValue) ? "✅" : (fieldType.fieldResult?.visualBarcodeCompareValid == FieldComparisonResult.COMPARE_FALSE.rawValue) ? "❌" : "❔"
+        cell.barcodeLabel.textColor = (fieldType.fieldResult?.isBarcodeStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        cell.ocrLabel.textColor = (fieldType.fieldResult?.isVisualStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        cell.isValidLabel.text = (fieldType.overallResult == AuthenticationResult.OK.rawValue) ? "✅" : (fieldType.overallResult == AuthenticationResult.FAILED.rawValue) ? "❌" : "❔"
+      
         cell.indexPath = indexPath
         return cell
     }

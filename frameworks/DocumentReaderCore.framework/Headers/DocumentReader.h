@@ -76,6 +76,7 @@ typedef NS_ENUM(NSInteger, DocumentReaderLight)
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, assign) NSInteger pageIndex;
 @property (nonatomic, assign) DocumentReaderLight light;
+@property (nonatomic, assign) NSInteger type;
 
 @end
 

@@ -8,44 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		9B256F392354E09200565AFC /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B256F382354E09200565AFC /* Launch.storyboard */; };
-		9B847F9D235119B900E86904 /* PassiveFaceLivenessSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF863A2E2260E2F800967054 /* PassiveFaceLivenessSDK.framework */; };
-		9B847F9E235119B900E86904 /* PassiveFaceLivenessSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF863A2E2260E2F800967054 /* PassiveFaceLivenessSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CF0A288222B02DB10091D7D3 /* LivenessComponentFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF0A288122B02DB10091D7D3 /* LivenessComponentFramework.framework */; };
-		CF0A288322B02DB10091D7D3 /* LivenessComponentFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF0A288122B02DB10091D7D3 /* LivenessComponentFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CF202F67230DDBF500AB15A7 /* BiospMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF202F66230DDBF500AB15A7 /* BiospMessage.swift */; };
+		9B9FD2B1235B6E15004BA90D /* DocumentReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9FD2B0235B6E15004BA90D /* DocumentReader.framework */; };
+		9B9FD2B2235B6E15004BA90D /* DocumentReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9FD2B0235B6E15004BA90D /* DocumentReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B9FD2B5235B6E24004BA90D /* DocumentReaderCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9FD2B4235B6E24004BA90D /* DocumentReaderCore.framework */; };
+		9B9FD2B6235B6E24004BA90D /* DocumentReaderCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9FD2B4235B6E24004BA90D /* DocumentReaderCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B9FD2B8235B6E2F004BA90D /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9FD2B7235B6E2F004BA90D /* XLPagerTabStrip.framework */; };
+		9B9FD2B9235B6E2F004BA90D /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9FD2B7235B6E2F004BA90D /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B9FD2BB235B6E41004BA90D /* FaceLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9FD2BA235B6E41004BA90D /* FaceLiveness.framework */; };
+		9B9FD2BC235B6E41004BA90D /* FaceLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9FD2BA235B6E41004BA90D /* FaceLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B9FD2CA235B7094004BA90D /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2C9235B7094004BA90D /* CommonUtils.swift */; };
+		9B9FD2CC235B70AF004BA90D /* AuthenticationConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2CB235B70AF004BA90D /* AuthenticationConnectionHandler.swift */; };
+		9B9FD2CE235B70C1004BA90D /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2CD235B70C1004BA90D /* CommonConstants.swift */; };
+		9B9FD2DF235B70E3004BA90D /* FieldComparisonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2CF235B70DA004BA90D /* FieldComparisonResult.swift */; };
+		9B9FD2E0235B70E3004BA90D /* BiospMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2D0235B70DA004BA90D /* BiospMessage.swift */; };
+		9B9FD2E1235B70E3004BA90D /* FieldValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2D1235B70DB004BA90D /* FieldValidationResult.swift */; };
+		9B9FD2E2235B70E3004BA90D /* BiometricsAuthenticationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2D2235B70DC004BA90D /* BiometricsAuthenticationResult.swift */; };
+		9B9FD2E3235B70E3004BA90D /* FacialImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2D3235B70DC004BA90D /* FacialImage.swift */; };
+		9B9FD2E4235B70E3004BA90D /* BiometricsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2D4235B70DD004BA90D /* BiometricsInfo.swift */; };
+		9B9FD2E5235B70E3004BA90D /* FieldResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2D5235B70DD004BA90D /* FieldResult.swift */; };
+		9B9FD2E6235B70E3004BA90D /* AuthenticationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2D6235B70DE004BA90D /* AuthenticationResult.swift */; };
+		9B9FD2E7235B70E3004BA90D /* DocumentAuthenticationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2D7235B70DF004BA90D /* DocumentAuthenticationResult.swift */; };
+		9B9FD2E8235B70E3004BA90D /* DocumentAuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2D8235B70DF004BA90D /* DocumentAuthenticationResponse.swift */; };
+		9B9FD2E9235B70E3004BA90D /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2D9235B70E0004BA90D /* FieldType.swift */; };
+		9B9FD2EA235B70E3004BA90D /* Modality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2DA235B70E1004BA90D /* Modality.swift */; };
+		9B9FD2EB235B70E3004BA90D /* DocumentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2DB235B70E1004BA90D /* DocumentImage.swift */; };
+		9B9FD2EC235B70E3004BA90D /* DocumentsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2DC235B70E2004BA90D /* DocumentsInfo.swift */; };
+		9B9FD2ED235B70E3004BA90D /* DocumentAuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2DD235B70E3004BA90D /* DocumentAuthenticationRequest.swift */; };
+		9B9FD2EE235B70E3004BA90D /* DocAndBiometricsCapturedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2DE235B70E3004BA90D /* DocAndBiometricsCapturedMessage.swift */; };
+		9B9FD2F0235B732C004BA90D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9FD2EF235B732C004BA90D /* Main.storyboard */; };
+		9B9FD2F2235B740F004BA90D /* PassiveFaceLivenessSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9FD2F1235B740F004BA90D /* PassiveFaceLivenessSDK.framework */; };
+		9B9FD2F3235B740F004BA90D /* PassiveFaceLivenessSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9FD2F1235B740F004BA90D /* PassiveFaceLivenessSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9BE456E62368ABD4004093A7 /* screenLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE456E52368ABD3004093A7 /* screenLogo.png */; };
 		CF307AB221ED385B000DB286 /* regula.license in Resources */ = {isa = PBXBuildFile; fileRef = CF307AB121ED385B000DB286 /* regula.license */; };
 		CF307AC421EFD4BD000DB286 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF307AC321EFD4BD000DB286 /* ResultViewController.swift */; };
 		CF307AE121EFFFAF000DB286 /* ResultSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF307AE021EFFFAF000DB286 /* ResultSummaryViewController.swift */; };
 		CF307B5921F25259000DB286 /* ResultTextDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF307B5821F25259000DB286 /* ResultTextDataViewController.swift */; };
 		CF307B5E21F25773000DB286 /* ResultContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF307B5D21F25773000DB286 /* ResultContainerViewController.swift */; };
-		CF307B6021F2634D000DB286 /* AuthenticationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF307B5F21F2634D000DB286 /* AuthenticationResult.swift */; };
-		CF307B6421F7AF77000DB286 /* FieldValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF307B6321F7AF77000DB286 /* FieldValidationResult.swift */; };
-		CF307B6621F7AFAA000DB286 /* FieldComparisonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF307B6521F7AFAA000DB286 /* FieldComparisonResult.swift */; };
-		CF863A372260E30500967054 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF863A322260E30400967054 /* XLPagerTabStrip.framework */; };
-		CF863A382260E30500967054 /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF863A322260E30400967054 /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CF863A392260E30500967054 /* DocumentReaderCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF863A332260E30400967054 /* DocumentReaderCore.framework */; };
-		CF863A3A2260E30500967054 /* DocumentReaderCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF863A332260E30400967054 /* DocumentReaderCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CF863A3B2260E30500967054 /* DocumentReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF863A342260E30400967054 /* DocumentReader.framework */; };
-		CF863A3C2260E30500967054 /* DocumentReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF863A342260E30400967054 /* DocumentReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFEBF17021750D6A00646823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF16F21750D6A00646823 /* AppDelegate.swift */; };
 		CFEBF17221750D6B00646823 /* DocReaderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF17121750D6B00646823 /* DocReaderMainViewController.swift */; };
-		CFEBF17521750D6B00646823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEBF17321750D6B00646823 /* Main.storyboard */; };
 		CFEBF17721750D9300646823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFEBF17621750D9300646823 /* Assets.xcassets */; };
-		CFEBF18F21751FC600646823 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF18E21751FC600646823 /* CommonUtils.swift */; };
-		CFEBF1922175391500646823 /* DocumentsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF1912175391500646823 /* DocumentsInfo.swift */; };
-		CFEBF1942175391F00646823 /* DocumentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF1932175391F00646823 /* DocumentImage.swift */; };
-		CFEBF19721753BF500646823 /* DocumentAuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF19621753BF500646823 /* DocumentAuthenticationRequest.swift */; };
-		CFEBF19C2175482100646823 /* BiometricsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF19B2175482100646823 /* BiometricsInfo.swift */; };
-		CFEBF23A21779CB200646823 /* FacialImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF23921779CB200646823 /* FacialImage.swift */; };
-		CFEBF23C21779E7F00646823 /* AuthenticationConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF23B21779E7F00646823 /* AuthenticationConnectionHandler.swift */; };
-		CFEBF23F21779EC900646823 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF23E21779EC900646823 /* CommonConstants.swift */; };
-		CFEBF24121779F7300646823 /* DocumentAuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF24021779F7300646823 /* DocumentAuthenticationResponse.swift */; };
-		CFEBF24321779F9900646823 /* DocumentAuthenticationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF24221779F9900646823 /* DocumentAuthenticationResult.swift */; };
-		CFEBF24521779FB300646823 /* BiometricsAuthenticationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF24421779FB300646823 /* BiometricsAuthenticationResult.swift */; };
-		CFEBF2472177A01B00646823 /* Modality.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF2462177A01B00646823 /* Modality.swift */; };
-		CFEBF2492177A09E00646823 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF2482177A09E00646823 /* FieldType.swift */; };
-		CFEBF24B2177A0C200646823 /* FieldResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF24A2177A0C200646823 /* FieldResult.swift */; };
-		CFF0AE6B22384C5200D32982 /* DocAndBiometricsCapturedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0AE6A22384C5100D32982 /* DocAndBiometricsCapturedMessage.swift */; };
 		CFF0AE7222384C9E00D32982 /* DocReaderDispatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0AE6C22384C9E00D32982 /* DocReaderDispatchViewController.swift */; };
 		CFF0AE7422384C9E00D32982 /* DocReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFF0AE6E22384C9E00D32982 /* DocReaderViewController.xib */; };
 		CFF0AE7622384C9E00D32982 /* DocReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0AE7022384C9E00D32982 /* DocReaderViewController.swift */; };
@@ -55,17 +56,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CFEBF184217513C200646823 /* Embed Frameworks */ = {
+		9B9FD2B3235B6E15004BA90D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9B847F9E235119B900E86904 /* PassiveFaceLivenessSDK.framework in Embed Frameworks */,
-				CF863A3C2260E30500967054 /* DocumentReader.framework in Embed Frameworks */,
-				CF863A382260E30500967054 /* XLPagerTabStrip.framework in Embed Frameworks */,
-				CF863A3A2260E30500967054 /* DocumentReaderCore.framework in Embed Frameworks */,
-				CF0A288322B02DB10091D7D3 /* LivenessComponentFramework.framework in Embed Frameworks */,
+				9B9FD2F3235B740F004BA90D /* PassiveFaceLivenessSDK.framework in Embed Frameworks */,
+				9B9FD2B2235B6E15004BA90D /* DocumentReader.framework in Embed Frameworks */,
+				9B9FD2B9235B6E2F004BA90D /* XLPagerTabStrip.framework in Embed Frameworks */,
+				9B9FD2BC235B6E41004BA90D /* FaceLiveness.framework in Embed Frameworks */,
+				9B9FD2B6235B6E24004BA90D /* DocumentReaderCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,41 +75,42 @@
 
 /* Begin PBXFileReference section */
 		9B256F382354E09200565AFC /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
-		CF0A288122B02DB10091D7D3 /* LivenessComponentFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LivenessComponentFramework.framework; path = frameworks/LivenessComponentFramework.framework; sourceTree = "<group>"; };
-		CF202F66230DDBF500AB15A7 /* BiospMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiospMessage.swift; sourceTree = "<group>"; };
+		9B9FD2B0235B6E15004BA90D /* DocumentReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReader.framework; path = frameworks/DocumentReader.framework; sourceTree = "<group>"; };
+		9B9FD2B4235B6E24004BA90D /* DocumentReaderCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReaderCore.framework; path = frameworks/DocumentReaderCore.framework; sourceTree = "<group>"; };
+		9B9FD2B7235B6E2F004BA90D /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = frameworks/XLPagerTabStrip.framework; sourceTree = "<group>"; };
+		9B9FD2BA235B6E41004BA90D /* FaceLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceLiveness.framework; path = frameworks/FaceLiveness.framework; sourceTree = "<group>"; };
+		9B9FD2C9235B7094004BA90D /* CommonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
+		9B9FD2CB235B70AF004BA90D /* AuthenticationConnectionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationConnectionHandler.swift; sourceTree = "<group>"; };
+		9B9FD2CD235B70C1004BA90D /* CommonConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
+		9B9FD2CF235B70DA004BA90D /* FieldComparisonResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldComparisonResult.swift; sourceTree = "<group>"; };
+		9B9FD2D0235B70DA004BA90D /* BiospMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiospMessage.swift; sourceTree = "<group>"; };
+		9B9FD2D1235B70DB004BA90D /* FieldValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidationResult.swift; sourceTree = "<group>"; };
+		9B9FD2D2235B70DC004BA90D /* BiometricsAuthenticationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricsAuthenticationResult.swift; sourceTree = "<group>"; };
+		9B9FD2D3235B70DC004BA90D /* FacialImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialImage.swift; sourceTree = "<group>"; };
+		9B9FD2D4235B70DD004BA90D /* BiometricsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricsInfo.swift; sourceTree = "<group>"; };
+		9B9FD2D5235B70DD004BA90D /* FieldResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldResult.swift; sourceTree = "<group>"; };
+		9B9FD2D6235B70DE004BA90D /* AuthenticationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationResult.swift; sourceTree = "<group>"; };
+		9B9FD2D7235B70DF004BA90D /* DocumentAuthenticationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentAuthenticationResult.swift; sourceTree = "<group>"; };
+		9B9FD2D8235B70DF004BA90D /* DocumentAuthenticationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentAuthenticationResponse.swift; sourceTree = "<group>"; };
+		9B9FD2D9235B70E0004BA90D /* FieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
+		9B9FD2DA235B70E1004BA90D /* Modality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modality.swift; sourceTree = "<group>"; };
+		9B9FD2DB235B70E1004BA90D /* DocumentImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentImage.swift; sourceTree = "<group>"; };
+		9B9FD2DC235B70E2004BA90D /* DocumentsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsInfo.swift; sourceTree = "<group>"; };
+		9B9FD2DD235B70E3004BA90D /* DocumentAuthenticationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentAuthenticationRequest.swift; sourceTree = "<group>"; };
+		9B9FD2DE235B70E3004BA90D /* DocAndBiometricsCapturedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocAndBiometricsCapturedMessage.swift; sourceTree = "<group>"; };
+		9B9FD2EF235B732C004BA90D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9B9FD2F1235B740F004BA90D /* PassiveFaceLivenessSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PassiveFaceLivenessSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE456E52368ABD3004093A7 /* screenLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenLogo.png; sourceTree = "<group>"; };
 		CF307AB121ED385B000DB286 /* regula.license */ = {isa = PBXFileReference; lastKnownFileType = file; path = regula.license; sourceTree = "<group>"; };
 		CF307AC321EFD4BD000DB286 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CF307AE021EFFFAF000DB286 /* ResultSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSummaryViewController.swift; sourceTree = "<group>"; };
 		CF307B5821F25259000DB286 /* ResultTextDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTextDataViewController.swift; sourceTree = "<group>"; };
 		CF307B5D21F25773000DB286 /* ResultContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultContainerViewController.swift; sourceTree = "<group>"; };
-		CF307B5F21F2634D000DB286 /* AuthenticationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationResult.swift; sourceTree = "<group>"; };
-		CF307B6321F7AF77000DB286 /* FieldValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidationResult.swift; sourceTree = "<group>"; };
-		CF307B6521F7AFAA000DB286 /* FieldComparisonResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldComparisonResult.swift; sourceTree = "<group>"; };
-		CF863A2E2260E2F800967054 /* PassiveFaceLivenessSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PassiveFaceLivenessSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF863A322260E30400967054 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = frameworks/XLPagerTabStrip.framework; sourceTree = "<group>"; };
-		CF863A332260E30400967054 /* DocumentReaderCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReaderCore.framework; path = frameworks/DocumentReaderCore.framework; sourceTree = "<group>"; };
-		CF863A342260E30400967054 /* DocumentReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReader.framework; path = frameworks/DocumentReader.framework; sourceTree = "<group>"; };
 		CFEBF16C21750D6A00646823 /* PALADIN.M.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PALADIN.M.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEBF16F21750D6A00646823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFEBF17121750D6B00646823 /* DocReaderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocReaderMainViewController.swift; sourceTree = "<group>"; };
-		CFEBF17421750D6B00646823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFEBF17621750D9300646823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFEBF17B21750D9400646823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFEBF18E21751FC600646823 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
-		CFEBF1912175391500646823 /* DocumentsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsInfo.swift; sourceTree = "<group>"; };
-		CFEBF1932175391F00646823 /* DocumentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentImage.swift; sourceTree = "<group>"; };
-		CFEBF19621753BF500646823 /* DocumentAuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentAuthenticationRequest.swift; sourceTree = "<group>"; };
-		CFEBF19B2175482100646823 /* BiometricsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricsInfo.swift; sourceTree = "<group>"; };
-		CFEBF23921779CB200646823 /* FacialImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialImage.swift; sourceTree = "<group>"; };
-		CFEBF23B21779E7F00646823 /* AuthenticationConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationConnectionHandler.swift; sourceTree = "<group>"; };
-		CFEBF23E21779EC900646823 /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
-		CFEBF24021779F7300646823 /* DocumentAuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentAuthenticationResponse.swift; sourceTree = "<group>"; };
-		CFEBF24221779F9900646823 /* DocumentAuthenticationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentAuthenticationResult.swift; sourceTree = "<group>"; };
-		CFEBF24421779FB300646823 /* BiometricsAuthenticationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricsAuthenticationResult.swift; sourceTree = "<group>"; };
-		CFEBF2462177A01B00646823 /* Modality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modality.swift; sourceTree = "<group>"; };
-		CFEBF2482177A09E00646823 /* FieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
-		CFEBF24A2177A0C200646823 /* FieldResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldResult.swift; sourceTree = "<group>"; };
-		CFF0AE6A22384C5100D32982 /* DocAndBiometricsCapturedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocAndBiometricsCapturedMessage.swift; sourceTree = "<group>"; };
 		CFF0AE6C22384C9E00D32982 /* DocReaderDispatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocReaderDispatchViewController.swift; sourceTree = "<group>"; };
 		CFF0AE6E22384C9E00D32982 /* DocReaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocReaderViewController.xib; sourceTree = "<group>"; };
 		CFF0AE7022384C9E00D32982 /* DocReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocReaderViewController.swift; sourceTree = "<group>"; };
@@ -122,11 +124,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B847F9D235119B900E86904 /* PassiveFaceLivenessSDK.framework in Frameworks */,
-				CF863A3B2260E30500967054 /* DocumentReader.framework in Frameworks */,
-				CF863A372260E30500967054 /* XLPagerTabStrip.framework in Frameworks */,
-				CF863A392260E30500967054 /* DocumentReaderCore.framework in Frameworks */,
-				CF0A288222B02DB10091D7D3 /* LivenessComponentFramework.framework in Frameworks */,
+				9B9FD2F2235B740F004BA90D /* PassiveFaceLivenessSDK.framework in Frameworks */,
+				9B9FD2B1235B6E15004BA90D /* DocumentReader.framework in Frameworks */,
+				9B9FD2B8235B6E2F004BA90D /* XLPagerTabStrip.framework in Frameworks */,
+				9B9FD2BB235B6E41004BA90D /* FaceLiveness.framework in Frameworks */,
+				9B9FD2B5235B6E24004BA90D /* DocumentReaderCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,11 +150,11 @@
 		CFEBF16321750D6A00646823 = {
 			isa = PBXGroup;
 			children = (
-				CF0A288122B02DB10091D7D3 /* LivenessComponentFramework.framework */,
-				CF863A342260E30400967054 /* DocumentReader.framework */,
-				CF863A332260E30400967054 /* DocumentReaderCore.framework */,
-				CF863A322260E30400967054 /* XLPagerTabStrip.framework */,
-				CF863A2E2260E2F800967054 /* PassiveFaceLivenessSDK.framework */,
+				9B9FD2F1235B740F004BA90D /* PassiveFaceLivenessSDK.framework */,
+				9B9FD2BA235B6E41004BA90D /* FaceLiveness.framework */,
+				9B9FD2B7235B6E2F004BA90D /* XLPagerTabStrip.framework */,
+				9B9FD2B4235B6E24004BA90D /* DocumentReaderCore.framework */,
+				9B9FD2B0235B6E15004BA90D /* DocumentReader.framework */,
 				CFEBF16E21750D6A00646823 /* PALADIN.M */,
 				CFEBF16D21750D6A00646823 /* Products */,
 			);
@@ -175,9 +177,10 @@
 				CFEBF19521753BD200646823 /* Common */,
 				CFEBF1902175390100646823 /* Beans */,
 				CFEBF16F21750D6A00646823 /* AppDelegate.swift */,
+				9BE456E52368ABD3004093A7 /* screenLogo.png */,
 				CFEBF17121750D6B00646823 /* DocReaderMainViewController.swift */,
 				CFF0AE6C22384C9E00D32982 /* DocReaderDispatchViewController.swift */,
-				CFEBF17321750D6B00646823 /* Main.storyboard */,
+				9B9FD2EF235B732C004BA90D /* Main.storyboard */,
 				CFEBF17621750D9300646823 /* Assets.xcassets */,
 				CFEBF17B21750D9400646823 /* Info.plist */,
 				9B256F382354E09200565AFC /* Launch.storyboard */,
@@ -188,22 +191,22 @@
 		CFEBF1902175390100646823 /* Beans */ = {
 			isa = PBXGroup;
 			children = (
-				CFF0AE6A22384C5100D32982 /* DocAndBiometricsCapturedMessage.swift */,
-				CFEBF19621753BF500646823 /* DocumentAuthenticationRequest.swift */,
-				CFEBF1912175391500646823 /* DocumentsInfo.swift */,
-				CFEBF1932175391F00646823 /* DocumentImage.swift */,
-				CFEBF19B2175482100646823 /* BiometricsInfo.swift */,
-				CFEBF23921779CB200646823 /* FacialImage.swift */,
-				CFEBF24021779F7300646823 /* DocumentAuthenticationResponse.swift */,
-				CFEBF24221779F9900646823 /* DocumentAuthenticationResult.swift */,
-				CFEBF24421779FB300646823 /* BiometricsAuthenticationResult.swift */,
-				CFEBF2462177A01B00646823 /* Modality.swift */,
-				CFEBF2482177A09E00646823 /* FieldType.swift */,
-				CFEBF24A2177A0C200646823 /* FieldResult.swift */,
-				CF307B5F21F2634D000DB286 /* AuthenticationResult.swift */,
-				CF307B6321F7AF77000DB286 /* FieldValidationResult.swift */,
-				CF307B6521F7AFAA000DB286 /* FieldComparisonResult.swift */,
-				CF202F66230DDBF500AB15A7 /* BiospMessage.swift */,
+				9B9FD2D6235B70DE004BA90D /* AuthenticationResult.swift */,
+				9B9FD2D2235B70DC004BA90D /* BiometricsAuthenticationResult.swift */,
+				9B9FD2D4235B70DD004BA90D /* BiometricsInfo.swift */,
+				9B9FD2D0235B70DA004BA90D /* BiospMessage.swift */,
+				9B9FD2DE235B70E3004BA90D /* DocAndBiometricsCapturedMessage.swift */,
+				9B9FD2DD235B70E3004BA90D /* DocumentAuthenticationRequest.swift */,
+				9B9FD2D8235B70DF004BA90D /* DocumentAuthenticationResponse.swift */,
+				9B9FD2D7235B70DF004BA90D /* DocumentAuthenticationResult.swift */,
+				9B9FD2DB235B70E1004BA90D /* DocumentImage.swift */,
+				9B9FD2DC235B70E2004BA90D /* DocumentsInfo.swift */,
+				9B9FD2D3235B70DC004BA90D /* FacialImage.swift */,
+				9B9FD2CF235B70DA004BA90D /* FieldComparisonResult.swift */,
+				9B9FD2D5235B70DD004BA90D /* FieldResult.swift */,
+				9B9FD2D9235B70E0004BA90D /* FieldType.swift */,
+				9B9FD2D1235B70DB004BA90D /* FieldValidationResult.swift */,
+				9B9FD2DA235B70E1004BA90D /* Modality.swift */,
 			);
 			path = Beans;
 			sourceTree = "<group>";
@@ -211,9 +214,9 @@
 		CFEBF19521753BD200646823 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				CFEBF18E21751FC600646823 /* CommonUtils.swift */,
-				CFEBF23B21779E7F00646823 /* AuthenticationConnectionHandler.swift */,
-				CFEBF23E21779EC900646823 /* CommonConstants.swift */,
+				9B9FD2C9235B7094004BA90D /* CommonUtils.swift */,
+				9B9FD2CB235B70AF004BA90D /* AuthenticationConnectionHandler.swift */,
+				9B9FD2CD235B70C1004BA90D /* CommonConstants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -247,8 +250,8 @@
 				CFEBF16821750D6A00646823 /* Sources */,
 				CFEBF16921750D6A00646823 /* Frameworks */,
 				CFEBF16A21750D6A00646823 /* Resources */,
-				CFEBF184217513C200646823 /* Embed Frameworks */,
 				CF307BA52202410D000DB286 /* ShellScript */,
+				9B9FD2B3235B6E15004BA90D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,7 +301,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFEBF17721750D9300646823 /* Assets.xcassets in Resources */,
-				CFEBF17521750D6B00646823 /* Main.storyboard in Resources */,
+				9B9FD2F0235B732C004BA90D /* Main.storyboard in Resources */,
+				9BE456E62368ABD4004093A7 /* screenLogo.png in Resources */,
 				CFF0AE7422384C9E00D32982 /* DocReaderViewController.xib in Resources */,
 				CF307AB221ED385B000DB286 /* regula.license in Resources */,
 				9B256F392354E09200565AFC /* Launch.storyboard in Resources */,
@@ -332,51 +336,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFEBF19721753BF500646823 /* DocumentAuthenticationRequest.swift in Sources */,
-				CFEBF23C21779E7F00646823 /* AuthenticationConnectionHandler.swift in Sources */,
-				CFEBF1922175391500646823 /* DocumentsInfo.swift in Sources */,
-				CF307B6021F2634D000DB286 /* AuthenticationResult.swift in Sources */,
+				9B9FD2E4235B70E3004BA90D /* BiometricsInfo.swift in Sources */,
+				9B9FD2E5235B70E3004BA90D /* FieldResult.swift in Sources */,
+				9B9FD2ED235B70E3004BA90D /* DocumentAuthenticationRequest.swift in Sources */,
 				CFEBF17221750D6B00646823 /* DocReaderMainViewController.swift in Sources */,
-				CFEBF1942175391F00646823 /* DocumentImage.swift in Sources */,
 				CFEBF17021750D6A00646823 /* AppDelegate.swift in Sources */,
-				CFF0AE6B22384C5200D32982 /* DocAndBiometricsCapturedMessage.swift in Sources */,
+				9B9FD2EE235B70E3004BA90D /* DocAndBiometricsCapturedMessage.swift in Sources */,
+				9B9FD2E1235B70E3004BA90D /* FieldValidationResult.swift in Sources */,
+				9B9FD2E8235B70E3004BA90D /* DocumentAuthenticationResponse.swift in Sources */,
+				9B9FD2E2235B70E3004BA90D /* BiometricsAuthenticationResult.swift in Sources */,
 				CFF0AE7622384C9E00D32982 /* DocReaderViewController.swift in Sources */,
-				CF202F67230DDBF500AB15A7 /* BiospMessage.swift in Sources */,
-				CFEBF23F21779EC900646823 /* CommonConstants.swift in Sources */,
-				CFEBF24321779F9900646823 /* DocumentAuthenticationResult.swift in Sources */,
 				CF307AC421EFD4BD000DB286 /* ResultViewController.swift in Sources */,
 				CFF0AE80223869B400D32982 /* PassiveFaceLivenessManagerViewController.swift in Sources */,
-				CFEBF18F21751FC600646823 /* CommonUtils.swift in Sources */,
 				CF307AE121EFFFAF000DB286 /* ResultSummaryViewController.swift in Sources */,
-				CFEBF24121779F7300646823 /* DocumentAuthenticationResponse.swift in Sources */,
+				9B9FD2E9235B70E3004BA90D /* FieldType.swift in Sources */,
+				9B9FD2EC235B70E3004BA90D /* DocumentsInfo.swift in Sources */,
+				9B9FD2CA235B7094004BA90D /* CommonUtils.swift in Sources */,
+				9B9FD2DF235B70E3004BA90D /* FieldComparisonResult.swift in Sources */,
+				9B9FD2E3235B70E3004BA90D /* FacialImage.swift in Sources */,
+				9B9FD2CC235B70AF004BA90D /* AuthenticationConnectionHandler.swift in Sources */,
+				9B9FD2CE235B70C1004BA90D /* CommonConstants.swift in Sources */,
 				CFF0AE7222384C9E00D32982 /* DocReaderDispatchViewController.swift in Sources */,
-				CFEBF19C2175482100646823 /* BiometricsInfo.swift in Sources */,
-				CFEBF2492177A09E00646823 /* FieldType.swift in Sources */,
+				9B9FD2E6235B70E3004BA90D /* AuthenticationResult.swift in Sources */,
 				CFF0AE852239537100D32982 /* PassiveFaceLivenessHelpers.swift in Sources */,
-				CFEBF24521779FB300646823 /* BiometricsAuthenticationResult.swift in Sources */,
-				CF307B6621F7AFAA000DB286 /* FieldComparisonResult.swift in Sources */,
-				CFEBF2472177A01B00646823 /* Modality.swift in Sources */,
+				9B9FD2EA235B70E3004BA90D /* Modality.swift in Sources */,
 				CF307B5E21F25773000DB286 /* ResultContainerViewController.swift in Sources */,
+				9B9FD2E7235B70E3004BA90D /* DocumentAuthenticationResult.swift in Sources */,
 				CF307B5921F25259000DB286 /* ResultTextDataViewController.swift in Sources */,
-				CF307B6421F7AF77000DB286 /* FieldValidationResult.swift in Sources */,
 				E9FE9B4A21F6250D002AD5D3 /* DocumentFieldTypeCellTableViewCell.swift in Sources */,
-				CFEBF23A21779CB200646823 /* FacialImage.swift in Sources */,
-				CFEBF24B2177A0C200646823 /* FieldResult.swift in Sources */,
+				9B9FD2E0235B70E3004BA90D /* BiospMessage.swift in Sources */,
+				9B9FD2EB235B70E3004BA90D /* DocumentImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CFEBF17321750D6B00646823 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CFEBF17421750D6B00646823 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CFEBF17C21750D9400646823 /* Debug */ = {
@@ -498,24 +491,28 @@
 		CFEBF17F21750D9400646823 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Y57QV4NW5;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/frameworks/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/frameworks/**",
+					"$(PROJECT_DIR)/frameworks",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 					__IOS__,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/PALADIN.M/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aware.idproof.mos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.paladin.m;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -526,20 +523,24 @@
 		CFEBF18021750D9400646823 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Y57QV4NW5;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/frameworks/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/frameworks/**",
+					"$(PROJECT_DIR)/frameworks",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = __IOS__;
 				INFOPLIST_FILE = "$(SRCROOT)/PALADIN.M/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aware.idproof.mos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.paladin.m;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

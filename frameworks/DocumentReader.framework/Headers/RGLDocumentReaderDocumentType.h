@@ -214,8 +214,9 @@ typedef NS_ENUM(NSInteger, RGLDiDocType) {
   RGLDiDocTypeIdentityCertificate = 223,
   RGLDiDocTypeResidentIdCard = 224,
   RGLDiDocTypeArmedForcesIdentityCard = 225
-};
+} NS_SWIFT_NAME(DiDocType);
 
+NS_SWIFT_NAME(DocumentReaderDocumentType)
 @interface RGLDocumentReaderDocumentType : NSObject
 
 @property(nonatomic, strong, readonly, nullable) NSString *name;

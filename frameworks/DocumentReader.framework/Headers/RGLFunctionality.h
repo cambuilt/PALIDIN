@@ -5,6 +5,9 @@
 #import "RGLScenario.h"
 #import "RGLDocumentReaderCameraViewController.h"
 
+@class RGLDocumentReaderCameraViewController;
+
+NS_SWIFT_NAME(Functionality)
 @interface RGLFunctionality : NSObject
 
 @property(nonatomic, weak, nullable) RGLDocumentReaderCameraViewController *cameraViewController;
@@ -24,9 +27,8 @@
 @property(nonatomic, assign) BOOL singleResult;
 @property(nonatomic, assign) AVCaptureDevicePosition cameraPosition;
 @property(nonatomic, strong, nullable) NSString *btDeviceName;
-@property(nonatomic, assign) BOOL uvTorchEnabled;
+@property(nonatomic, assign, getter=isUseAuthenticator) BOOL useAuthenticator;
 @property(nonatomic, assign) BOOL rfidEnabled;
-@property(nonatomic, assign) BOOL showCaptureButtonAfterDelay;
 @property(nonatomic, assign) NSTimeInterval showCaptureButtonDelayFromDetect;
 @property(nonatomic, assign) NSTimeInterval showCaptureButtonDelayFromStart;
 

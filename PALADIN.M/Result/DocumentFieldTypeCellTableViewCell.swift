@@ -12,27 +12,27 @@
 import UIKit
 
 class DocumentFieldTypeCellTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var fieldTypeNameLabel: UILabel!
-    @IBOutlet weak var barcodeLabel: UILabel!
-    @IBOutlet weak var ocrLabel: UILabel!
-    @IBOutlet weak var barcodeOCRMatchingLabel: UILabel!
-    @IBOutlet weak var isValidLabel: UILabel!
+  
+  @IBOutlet weak var fieldTypeNameLabel: UILabel!
+  @IBOutlet weak var barcodeLabel: UILabel!
+  @IBOutlet weak var ocrLabel: UILabel!
+  @IBOutlet weak var barcodeOCRMatchingLabel: UILabel!
+  @IBOutlet weak var isValidLabel: UILabel!
+  
+  var indexPath: IndexPath? {
+    didSet {
+      self.backgroundColor = (indexPath!.row % 2 == 0) ? UIColor.white : UIColor(red: 237/255, green: 255/255, blue: 255/255, alpha: 1.0)
+    }
+  }
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
     
-    var indexPath: IndexPath? {
-        didSet {
-            self.backgroundColor = (indexPath!.row % 2 == 0) ? UIColor.white : UIColor(red: 237/255, green: 255/255, blue: 255/255, alpha: 1.0)
-        }
-    }
+  }
+  
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
-
+  }
+  
 }

@@ -19,15 +19,16 @@ typedef NS_ENUM(NSInteger, RGLBarcodeType) {
   RGLBarcodeTypeAZTEC           = 15,
   RGLBarcodeTypeDATAMATRIX      = 16,
   RGLBarcodeTypeALL_1D          = 17
-};
+} NS_SWIFT_NAME(BarcodeType);
 
 typedef NS_ENUM(NSInteger, RGLMeasureSystem) {
   RGLMeasureSystemMetric = 0,
   RGLMeasureSystemImperial = 1
-};
+} NS_SWIFT_NAME(MeasureSystem);
 
-@class RGLRfidScenario;
+@class RGLRFIDScenario;
 
+NS_SWIFT_NAME(ProcessParams)
 @interface RGLProcessParams : NSObject
 
 @property (nonatomic, strong, nullable) NSString *scenario;
@@ -43,9 +44,10 @@ typedef NS_ENUM(NSInteger, RGLMeasureSystem) {
 @property (nonatomic, strong, readonly, nullable) NSString *sessionLogFolder;
 @property (nonatomic, strong, nullable) NSArray *fieldTypesFilter;
 @property (nonatomic, strong, nullable) NSArray *barcodeTypes;
-@property (nonatomic, strong, nonnull) RGLRfidScenario *rfidOptions;
+@property (nonatomic, strong, nonnull) RGLRFIDScenario *rfidOptions;
 @property (nonatomic, assign) RGLMeasureSystem measureSystem;
-@property (nonatomic, assign) BOOL returnOriginalImage;
+@property (nonatomic, assign) BOOL returnUncroppedImage;
+@property (nonatomic, strong, nullable) NSDictionary *customParams;
 
 - (void)setSessionLogFolder:(NSString * _Nullable)sessionLogFolder;
 - (NSDictionary * _Nullable)processParamsDictionary;

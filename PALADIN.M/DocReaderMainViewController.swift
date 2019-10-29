@@ -13,95 +13,111 @@ import UIKit
 
 class DocReaderMainViewController: UIViewController {
 
-    var alertController: UIAlertController?
-    var spinnerIndicator: UIActivityIndicatorView?
-    @IBOutlet weak var labelTitle: UILabel!
-    @IBOutlet weak var buttonID: UIButton!
+  var alertController: UIAlertController?
+  var spinnerIndicator: UIActivityIndicatorView?
+  var firstTime = true, closedByUser = false
+  @IBOutlet weak var labelTitle: UILabel!
+  @IBOutlet weak var buttonID: UIButton!
+
+  override func viewWillAppear(_ animated: Bool) {
+      self.navigationController?.setNavigationBarHidden(true, animated: true)
+      super.viewWillAppear(animated)
+      AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+  }
   
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        super.viewWillAppear(animated)
-        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+  override func viewWillDisappear(_ animated: Bool) {
+      self.navigationController?.setNavigationBarHidden(false, animated: true)
+      super.viewWillDisappear(true)
+      AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    // Cameron code
+    if closedByUser == true {
+      exit(0)
+    } else {
+      if firstTime == true {
+        firstTime = false;
+//        startCameraCaptureBtnPressed(buttonID)
+      } else {
+        firstTime = true
+      }
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        super.viewWillDisappear(true)
-        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
-    }
+  }
 
-    @IBAction func startCameraCaptureBtnPressed(_ sender: UIButton) {
-
-        let dispatchViewController = self.storyboard?.instantiateViewController(withIdentifier: "DispatchViewController") as! DocReaderDispatchViewController
-
-        dispatchViewController.setDocumentProofCaptureCallback { (success, message, docProofCapturedMessage) in
-            if success {
-                if let docProofCapturedMessage = docProofCapturedMessage {
-                    if let docAuthenticationRequest = CommonUtils.convertDocProofCapturedMsgToDocAuthRequest(docAndBiometricsCapturedMessage: docProofCapturedMessage) {
-                        self.initWaitingAlert(message: "Waiting for result")
+  @IBAction func startCameraCaptureBtnPressed(_ sender: UIButton) {
+    let dispatchViewController = self.storyboard?.instantiateViewController(withIdentifier: "DispatchViewController") as! DocReaderDispatchViewController
+    dispatchViewController.setDocumentProofCaptureCallback { (success, message, docProofCapturedMessage) in
+      if success {
+        if let docProofCapturedMessage = docProofCapturedMessage {
+          if let docAuthenticationRequest = CommonUtils.convertDocProofCapturedMsgToDocAuthRequest(docAndBiometricsCapturedMessage: docProofCapturedMessage) {
+            self.initWaitingAlert(message: "Waiting for result")
+            DispatchQueue.main.async {
+              self.present(self.alertController!, animated: true, completion: {
+                DocAuthHandler.sendAuthenticationRequest(docAuthenticationRequest: docAuthenticationRequest) {
+                  (success: Bool, response: DocumentAuthenticationResponse?, errorMessage: String?) in
+                  DispatchQueue.main.async {
+                    self.alertController?.dismiss(animated: true, completion: {
+                      if success, let documentAuthenticationResponse = response {
                         DispatchQueue.main.async {
-                            self.present(self.alertController!, animated: true, completion: {
-                                DocAuthHandler.sendAuthenticationRequest(docAuthenticationRequest: docAuthenticationRequest) {
-                                    (success: Bool, response: DocumentAuthenticationResponse?, errorMessage: String?) in
-                                    DispatchQueue.main.async {
-                                        self.alertController?.dismiss(animated: true, completion: {
-                                            if success, let documentAuthenticationResponse = response {
-                                                DispatchQueue.main.async {
-                                                    self.displayResultViewController(documentAuthenticationResponse: documentAuthenticationResponse)
-                                                }
-                                            }
-                                            else {
-                                                self.showAlert(status: errorMessage!, error: true)
-                                            }
-                                        })
-                                    }
-                                }
-                            })
+                          self.displayResultViewController(documentAuthenticationResponse: documentAuthenticationResponse)
                         }
-                    }
-                    
+                      }
+                      else {
+                        self.showAlert(status: errorMessage!, error: true)
+                      }
+                    })
+                  }
                 }
+              })
             }
-            else {
-                // TODO: change success/message to code, which will combine them together
-                if let errorMessage = message, errorMessage == "Cancel" {
-                    // user canceled, do nothing
-                    print("Capture canceled by user")
-                }
-                else{
-                    self.showAlert(status: "Document Capture Failed", error: true)
-                }
-            }
+          }
+          
         }
-        self.present(dispatchViewController, animated: true, completion: nil)
-    }
-
-    private func displayResultViewController(documentAuthenticationResponse: DocumentAuthenticationResponse) {
-        let resultContainerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultContainerViewController") as! ResultContainerViewController
-        resultContainerViewController.documentAuthenticationResponse = documentAuthenticationResponse
-        resultContainerViewController.navigationItem.rightBarButtonItem = nil
-        self.navigationController?.pushViewController(resultContainerViewController, animated: false)
-    }
-    
-    func showAlert(status: String, error: Bool) {
-        var title: String = "Status"
-        if error {
-            title = "Error"
+      }
+      else {
+        // TODO: change success/message to code, which will combine them together
+        if let errorMessage = message, errorMessage == "Cancel" {
+          // user canceled, do nothing
+          print("Capture canceled by user")
+          // Cameron Code
+          self.closedByUser = true
+          return
         }
-        let alert = UIAlertController(title: title,
-                                      message: status,
-                                      preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated:true, completion: nil)
+        else{
+          self.showAlert(status: "Document Capture Failed", error: true)
+        }
+      }
     }
-    
-    private func initWaitingAlert(message: String){
-        alertController = UIAlertController(title: nil, message: message + "..\n\n", preferredStyle: .alert)
-        spinnerIndicator = UIActivityIndicatorView(style: .whiteLarge)
-        spinnerIndicator!.center = CGPoint(x:135.0, y: 65.5)
-        spinnerIndicator!.color = UIColor.black
-        spinnerIndicator!.startAnimating()
-        alertController!.view.addSubview(spinnerIndicator!)
+    self.present(dispatchViewController, animated: true, completion: nil)
+  }
+  
+  private func displayResultViewController(documentAuthenticationResponse: DocumentAuthenticationResponse) {
+    let resultContainerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultContainerViewController") as! ResultContainerViewController
+    resultContainerViewController.documentAuthenticationResponse = documentAuthenticationResponse
+    resultContainerViewController.navigationItem.rightBarButtonItem = nil
+    self.navigationController?.pushViewController(resultContainerViewController, animated: true)
+  }
+  
+  func showAlert(status: String, error: Bool) {
+    var title: String = "Status"
+    if error {
+      title = "Error"
     }
+    let alert = UIAlertController(title: title,
+                                  message: status,
+                                  preferredStyle: UIAlertController.Style.alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+    self.present(alert, animated:true, completion: nil)
+  }
+  
+  private func initWaitingAlert(message: String){
+    alertController = UIAlertController(title: nil, message: message + "..\n\n", preferredStyle: .alert)
+    spinnerIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    spinnerIndicator!.center = CGPoint(x:135.0, y: 65.5)
+    spinnerIndicator!.color = UIColor.black
+    spinnerIndicator!.startAnimating()
+    alertController!.view.addSubview(spinnerIndicator!)
+  }
 }
 

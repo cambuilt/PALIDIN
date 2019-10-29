@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "RGLDocReaderDocumentsDatabase.h"
 
+NS_SWIFT_NAME(DocReaderVersion)
 @interface RGLDocReaderVersion : NSObject
 
 @property (nonatomic, strong, nullable) NSString *api;

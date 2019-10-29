@@ -2,6 +2,9 @@
 
 #import "RGLDocumentReaderCameraViewController.h"
 
+@class RGLDocumentReaderCameraViewController;
+
+NS_SWIFT_NAME(Customization)
 @interface RGLCustomization : NSObject
 
 @property(nonatomic, weak, nullable) RGLDocumentReaderCameraViewController *cameraViewController;

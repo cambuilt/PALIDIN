@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+NS_SWIFT_NAME(Position)
 @interface RGLPosition : NSObject
 
 @property(nonatomic, assign, readonly) CGSize size;
@@ -15,7 +16,7 @@
 @property(nonatomic, assign, readonly) NSInteger docFormat;
 @property(nonatomic, assign, readonly) NSInteger pageIndex;
 
-- (nullable instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull)init NS_UNAVAILABLE;
 - (instancetype _Nonnull)initWithJSON:(NSDictionary *_Nonnull)json;
 + (instancetype _Nonnull)initWithJSON:(NSDictionary * _Nonnull)json;
 

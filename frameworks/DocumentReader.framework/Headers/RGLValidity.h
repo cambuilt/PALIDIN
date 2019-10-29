@@ -1,13 +1,14 @@
 #import <Foundation/Foundation.h>
 
-@class RGLRfidValue;
+@class RGLRFIDValue;
 
+NS_SWIFT_NAME(Validity)
 @interface RGLValidity : NSObject
 
-@property(nonatomic, strong, readonly, nonnull) RGLRfidValue *notAfter;
-@property(nonatomic, strong, readonly, nonnull) RGLRfidValue *notBefore;
+@property(nonatomic, strong, readonly, nonnull) RGLRFIDValue *notAfter;
+@property(nonatomic, strong, readonly, nonnull) RGLRFIDValue *notBefore;
 
-- (nullable instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull)init NS_UNAVAILABLE;
 - (instancetype _Nonnull)initWithJSON:(NSDictionary *_Nonnull)json;
 + (instancetype _Nonnull)initWithJSON:(NSDictionary * _Nonnull)json;
 

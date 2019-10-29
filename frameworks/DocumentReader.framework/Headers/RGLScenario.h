@@ -4,19 +4,20 @@ typedef NS_ENUM(NSInteger, RGLDocReaderFrame) {
     RGLDocReaderFrameScenarioDefault = 0,
     RGLDocReaderFrameMax = 1,
     RGLDocReaderFrameNone = 2
-};
+} NS_SWIFT_NAME(DocReaderFrame);
 
 typedef NS_ENUM(NSInteger, RGLDocReaderOrientation) {
     RGLDocReaderOrientationRotate = 0,
     RGLDocReaderOrientationPortrait = 1,
     RGLDocReaderOrientationLandscape = 2
-};
+} NS_SWIFT_NAME(DocReaderOrientation);
 
 typedef NS_ENUM(NSInteger, RGLCameraFrameShapeType) {
     RGLCameraFrameShapeTypeLine,
     RGLCameraFrameShapeTypeCorners
-};
+} NS_SWIFT_NAME(CameraFrameShapeType);
 
+NS_SWIFT_NAME(Scenario)
 @interface RGLScenario : NSObject
 
 @property(nonatomic, strong, readonly, nonnull) NSString *identifier;

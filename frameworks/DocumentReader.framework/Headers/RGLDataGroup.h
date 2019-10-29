@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 
+NS_SWIFT_NAME(DataGroup)
 @interface RGLDataGroup : NSObject
 
 @property(nonatomic, assign) BOOL dG1;

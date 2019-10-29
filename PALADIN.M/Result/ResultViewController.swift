@@ -13,28 +13,28 @@ import UIKit
 import XLPagerTabStrip
 
 class ResultViewController: ButtonBarPagerTabStripViewController {
-
-    var documentAuthenticationResponse: DocumentAuthenticationResponse?
+  
+  var documentAuthenticationResponse: DocumentAuthenticationResponse?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    buttonBarView.selectedBar.backgroundColor = .green
+    buttonBarView.selectedBar.tintColor = .clear
+  }
+  
+  override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        buttonBarView.selectedBar.backgroundColor = .green
-        buttonBarView.selectedBar.tintColor = .clear
-    }
-
-    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-
-        pagerTabStripController.view.backgroundColor = UIColor.clear
-        
-        let summaryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultSummaryViewController") as! ResultSummaryViewController
-        summaryViewController.tabName = "Summary"
-        summaryViewController.documentAuthenticationResponse = documentAuthenticationResponse
-
-        let textDataViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultTextDataViewController") as! ResultTextDataViewController
-        textDataViewController.tabName = "Text Data"
-        textDataViewController.documentAuthenticationResponse = documentAuthenticationResponse
-        
-        let childViewControllers = [summaryViewController, textDataViewController]
-        return Array(childViewControllers)
-    }
+    pagerTabStripController.view.backgroundColor = UIColor.clear
+    
+    let summaryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultSummaryViewController") as! ResultSummaryViewController
+    summaryViewController.tabName = "Summary"
+    summaryViewController.documentAuthenticationResponse = documentAuthenticationResponse
+    
+    let textDataViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultTextDataViewController") as! ResultTextDataViewController
+    textDataViewController.tabName = "Text Data"
+    textDataViewController.documentAuthenticationResponse = documentAuthenticationResponse
+    
+    let childViewControllers = [summaryViewController, textDataViewController]
+    return Array(childViewControllers)
+  }
 }

@@ -31,15 +31,16 @@ typedef NS_ENUM(NSInteger, RGLBarcodeResult) {
   RGLBarcodeResultIPDECODE_ERROR_FAULTROWS              = -4505,
   RGLBarcodeResultIPDECODE_ERROR_INCORRECT_ERROR_LEVEL  = -4511,
   RGLBarcodeResultIPDECODE_ERROR_LOADING_DEV_TABLE      = -4512
-};
+} NS_SWIFT_NAME(BarcodeResult);
 
 @class RGLDocumentReaderBarcodeField;
 
+NS_SWIFT_NAME(DocumentReaderBarcodeResult)
 @interface RGLDocumentReaderBarcodeResult : NSObject
 
 @property(nonatomic, strong, readonly, nullable) NSArray <RGLDocumentReaderBarcodeField *> *fields;
 
-- (nullable instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull)init NS_UNAVAILABLE;
 - (instancetype _Nonnull)initWithFields:(NSArray <RGLDocumentReaderBarcodeField *> *_Nonnull)fields;
 
 

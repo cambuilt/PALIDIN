@@ -2,6 +2,35 @@
 #import <AVFoundation/AVFoundation.h>
 #import "RGLScenario.h"
 #import "RGLProcessParams.h"
+#import "RGLCornerView.h"
+#import "RGLPreviewView.h"
+#import "RGLMaskView.h"
+#import "RGLActivityIndicator.h"
+#import "RGLDocumentView.h"
+#import "RGLDocumentReaderResults.h"
+#import "RGLDocumentReaderJsonResult.h"
+#import "RGLImageQualityGroup.h"
+#import "RGLDocumentPosition.h"
+#import "RGLFunctionality.h"
+#import "RGLCustomization.h"
+
+#import <CoreMotion/CoreMotion.h>
+
+typedef NS_ENUM(NSInteger, RGLSessionSetupResult) {
+    RGLSessionSetupResultSuccess,
+    RGLSessionSetupResultNotAuthorized,
+    RGLSessionSetupResultConfigurationFailed
+} NS_SWIFT_NAME(SessionSetupResult);
+
+typedef NS_ENUM(NSInteger, RGLCameraScanMode) {
+    RGLCameraScanModeContinues,
+    RGLCameraScanModeCapture
+} NS_SWIFT_NAME(CameraScanMode);
+
+typedef NS_ENUM(NSInteger, RGLTorchModeDevice) {
+    RGLTorchModeDeviceClearScreen = 0,
+    RGLTorchModeDeviceWhiteScreen  = 1
+} NS_SWIFT_NAME(TorchModeDevice);
 
 @class RGLDocumentReaderCameraViewController, RGLDocumentReaderResults, RGLImageReader;
 
@@ -10,12 +39,11 @@ typedef NS_ENUM(NSInteger, RGLCameraViewControllerAction) {
     RGLCameraViewControllerActionProcess,
     RGLCameraViewControllerActionCancel,
     RGLCameraViewControllerActionMorePagesAvailable
-};
+} NS_SWIFT_NAME(CameraViewControllerAction);
 
 typedef void (^RGLCameraViewControllerHandler)(RGLDocumentReaderCameraViewController * _Nullable controller,
                                             RGLCameraViewControllerAction action,
-                                            RGLDocumentReaderResults * _Nullable results);
-
+                                            RGLDocumentReaderResults * _Nullable results) NS_SWIFT_NAME(CameraViewControllerHandler);
 
 @protocol RGLDocumentReaderCameraViewControllerDelegate <NSObject>
 
@@ -60,7 +88,7 @@ typedef void (^RGLCameraViewControllerHandler)(RGLDocumentReaderCameraViewContro
 - (CGFloat)statusPositionMultiplierInCameraController:(RGLDocumentReaderCameraViewController *_Nonnull)controller;
 - (CGFloat)resultStatusPositionMultiplierInCameraController:(RGLDocumentReaderCameraViewController *_Nonnull)controller;
 - (UIImage *_Nullable)borderBackgroundImageInCameraController:(RGLDocumentReaderCameraViewController *_Nonnull)controller;
-- (BOOL)uvTorchEnabledInCameraController:(RGLDocumentReaderCameraViewController *_Nonnull)controller;
+- (BOOL)isUseAuthenticatorInCameraController:(RGLDocumentReaderCameraViewController *_Nonnull)controller;
 - (NSString *_Nullable)btDeviceNameInCameraController:(RGLDocumentReaderCameraViewController *_Nonnull)controller;
 - (NSString *_Nullable)cameraStatusInCameraController:(RGLDocumentReaderCameraViewController *_Nonnull)controller;
 
@@ -68,7 +96,70 @@ typedef void (^RGLCameraViewControllerHandler)(RGLDocumentReaderCameraViewContro
 
 @class RGLDocumentReaderCameraViewControllerDelegate;
 
+NS_SWIFT_NAME(DocumentReaderCameraViewController)
 @interface RGLDocumentReaderCameraViewController : UIViewController
+
+@property(nonatomic, assign) AVCaptureDevicePosition cameraPosition;
+@property(nonatomic, assign) BOOL resultStatusLocked;
+@property(nonatomic, assign) RGLSessionSetupResult setupResult;
+@property(nonatomic, strong, nonnull) dispatch_queue_t latestImageSyncronizeDataQueue;
+@property(nonatomic, strong, nonnull) dispatch_queue_t currentImageSyncronizeDataQueue;
+@property(nonatomic, strong, nonnull) dispatch_queue_t sessionQueue;
+@property(nonatomic, strong, nonnull) dispatch_queue_t captureQueue;
+@property(nonatomic, strong, nonnull) dispatch_queue_t metadataObjectsQueue;
+@property(nonatomic, assign) BOOL maxFrameSize;
+@property(nonatomic, assign) BOOL showHelpPopup;
+@property(nonatomic, assign) BOOL helpAnimationShowed;
+@property(nonatomic, assign) BOOL showResultMessages;
+@property(nonatomic, assign) BOOL showStatusMessages;
+@property(nonatomic, getter=isSessionRunning) BOOL sessionRunning;
+@property(nonatomic, getter=isSessionPresentReady) BOOL sessionPresentReady;
+@property(nonatomic, assign) BOOL recognizeWasInterrupted;
+@property(nonatomic, assign) BOOL skipNextPageRecognition;
+@property(nonatomic, assign) double motionRate;
+@property(nonatomic, strong, nullable) NSString *cameraStatusString;
+@property(nonatomic, nullable) AVCaptureSession *session;
+@property(nonatomic, nullable) AVCaptureVideoPreviewLayer *videoPreviewLayer;
+@property(nonatomic, nullable) AVCaptureMetadataOutput *metadataOutput;
+@property(nonatomic, nullable) AVCaptureDeviceInput *videoDeviceInput;
+@property(nonatomic, nullable) AVCaptureDevice *captureDevice;
+@property(nonatomic, nullable) CMMotionManager *motionManager;
+
+@property(nonatomic, strong, nullable) RGLDocumentReaderResults *latestResult;
+
+@property (nonatomic, getter=isCameraControllerPresentedModally) BOOL cameraControllerPresentedModally;
+
+@property(nonatomic, strong, nullable) RGLPreviewView *previewView;
+@property(nonatomic, strong, nullable) UIButton *closeButton;
+@property(nonatomic, strong, nullable) UIButton *flashButton;
+@property(nonatomic, strong, nullable) UIButton *swapCameraButton;
+@property(nonatomic, strong, nullable) UIButton *bleButton;
+@property(nonatomic, strong, nullable) UIButton *batteryButton;
+@property(nonatomic, strong, nullable) UILabel *statusLabel;
+@property(nonatomic, strong, nullable) UIButton *captureButton;
+@property(nonatomic, strong, nullable) UIButton *skipMultipageButton;
+@property(nonatomic, strong, nullable) UILabel *resultStatus;
+@property(nonatomic, strong, nullable) UIView *resultStatusView;
+@property(nonatomic, strong, nullable) UIButton *frameSizeButton;
+@property(nonatomic, strong, nullable) RGLMaskView *maskView;
+@property(nonatomic, strong, nullable) UILabel *logoLabel;
+@property(nonatomic, strong, nullable) UIImageView *logoImage;
+@property(nonatomic, strong, nullable) RGLCornerView *borderView;
+@property(nonatomic, strong, nullable) UIView *focusView;
+@property(nonatomic, strong, nullable) UILabel *cameraUnavailableLabel;
+@property(nonatomic, strong, nullable) RGLActivityIndicator *activityIndicator;
+@property(nonatomic, strong, nullable) RGLDocumentView *multipageScaningView;
+@property(nonatomic, strong, nullable) RGLDocumentView *helpAnimationView;
+@property(nonatomic, strong, nullable) UIImageView *borderPlaceholderImage;
+@property(nonatomic, assign) BOOL barcodeEnabled;
+@property(nonatomic, assign) BOOL faceEnabled;
+@property(nonatomic, strong, nullable) NSArray <AVMetadataObjectType> *selectedMetadataTypes;
+@property(nonatomic, strong, nullable) NSString *scenario;
+@property(nonatomic, strong, nullable) NSArray <AVMetadataMachineReadableCodeObject *> *machineReadableMetadata;
+@property(nonatomic, strong, nullable) NSArray <AVMetadataFaceObject *> *faceMetadata;
+@property(nonatomic, strong, nullable) NSMutableDictionary *inProgressPhotoCaptureDelegates;
+@property(nonatomic, assign) RGLResolutionType resolutionType;
+@property(nonatomic, assign) RGLCameraScanMode cameraScanMode;
 
 @property(nonatomic, weak, nullable) id<RGLDocumentReaderCameraViewControllerDelegate> cameraViewControllerDelegate;
 @property(nonatomic, strong, nullable) RGLCameraViewControllerHandler cameraViewControllerHandler;
@@ -89,6 +180,7 @@ typedef void (^RGLCameraViewControllerHandler)(RGLDocumentReaderCameraViewContro
   prepareCameraViewControllerWithImageReader:(RGLImageReader *_Nonnull)imageReader
                             photoImageReader:(RGLImageReader * _Nonnull)photoImageReader
                                     delegate:(id<RGLDocumentReaderCameraViewControllerDelegate> _Nullable)delegate
+                        cameraViewController:(RGLDocumentReaderCameraViewController * _Nullable)cameraViewController
                                      handler:(RGLCameraViewControllerHandler _Nonnull)handler;
 
 - (void)closeTapped:(UIButton *_Nonnull)button;
@@ -110,6 +202,7 @@ typedef void (^RGLCameraViewControllerHandler)(RGLDocumentReaderCameraViewContro
 - (void)notifyResultStatusTextColorChanged;
 - (void)notifyResultStatusTextFontChanged;
 - (void)notifyCameraFrameDefaultColorChanged;
+- (void)notifyCameraFrameActiveColorChanged;
 - (void)notifyStatusTextColorChanged;
 - (void)notifyStatusTextFontChanged;
 - (void)notifyShowStatusMessagesChanged;
@@ -125,11 +218,9 @@ typedef void (^RGLCameraViewControllerHandler)(RGLDocumentReaderCameraViewContro
 - (void)notifyShowBackgroundMaskChanged;
 - (void)notifyBorderBackgroundImageChanged;
 - (void)notifyBackgroundMaskAlphaChanged;
-- (void)notifyHelpAnimationImageContentModeChanged;
 - (void)notifyMultipageAnimationFrontImageContentModeChanged;
 - (void)notifyMultipageAnimationBackImageContentModeChanged;
 - (void)notifyBorderBackgroundImageContentModeChanged;
-- (void)notifyHelpAnimationImageChanged;
 - (void)notifyMultipageAnimationFrontImageChanged;
 - (void)notifyMultipageAnimationBackImageChanged;
 

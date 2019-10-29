@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
+NS_SWIFT_NAME(CardProperties)
 @interface RGLCardProperties : NSObject
-
 
 @property(nonatomic, assign, readonly) NSInteger aTQA;
 @property(nonatomic, strong, readonly, nonnull) NSString *aTQB;
@@ -18,7 +18,7 @@
 @property(nonatomic, assign, readonly) BOOL supportMifare;
 @property(nonatomic, strong, readonly, nonnull) NSString *uID;
 
-- (nullable instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull)init NS_UNAVAILABLE;
 - (instancetype _Nonnull)initWithJSON:(NSDictionary *_Nonnull)json;
 + (instancetype _Nonnull)initWithJSON:(NSDictionary * _Nonnull)json;
 
