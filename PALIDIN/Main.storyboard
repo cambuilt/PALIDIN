@@ -13,35 +13,78 @@
         <!--Doc Reader Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DocReaderMainViewController" customModule="PALADIN_M" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DocReaderMainViewController" customModule="PALIDIN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COu-Qw-tYn">
-                                <rect key="frame" x="37.5" y="342" width="300" height="47"/>
-                                <color key="backgroundColor" red="0.29803921570000003" green="0.62352941179999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COu-Qw-tYn" userLabel="buttonScan">
+                                <rect key="frame" x="0.0" y="620" width="375" height="47"/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.20000000000000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Apo-6E-qUv"/>
                                     <constraint firstAttribute="height" constant="47" id="xlf-bq-X9r"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Verify ID Document">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="SCAN DOCUMENT"/>
                                 <connections>
                                     <action selector="startCameraCaptureBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QhI-pt-E86"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="screenLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="9SD-Lb-4kC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="9SD-Lb-4kC">
                                 <rect key="frame" x="59" y="104" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hR3-om-2Oo">
+                                <rect key="frame" x="30" y="259" width="107" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDq-P2-Rtn" userLabel="firstBullet">
+                                <rect key="frame" x="30" y="281" width="14" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.4549019608" green="0.20000000000000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place the ID card on a dark background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itG-rQ-hPy">
+                                <rect key="frame" x="53" y="292" width="304" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="Y4V-SV-Ndf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.4549019608" green="0.20000000000000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Place the phone horizontally flat above the ID card" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwo-ke-M8t">
+                                <rect key="frame" x="53" y="323" width="295" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="QUl-gb-azl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.4549019608" green="0.20000000000000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13N-4n-0Fi" userLabel="secondBullet">
+                                <rect key="frame" x="30" y="314" width="14" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.4549019608" green="0.20000000000000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="COu-Qw-tYn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Sjn-fD-p05"/>
-                            <constraint firstItem="COu-Qw-tYn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iKf-YI-fL0"/>
+                            <constraint firstItem="9SD-Lb-4kC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="60c-b0-u93"/>
+                            <constraint firstItem="COu-Qw-tYn" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="HYt-F1-Zyf"/>
+                            <constraint firstItem="9SD-Lb-4kC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Nlh-h8-2Ot"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="9SD-Lb-4kC" secondAttribute="bottom" constant="-168" id="Vn4-Bt-mM8"/>
+                            <constraint firstItem="aDq-P2-Rtn" firstAttribute="top" secondItem="hR3-om-2Oo" secondAttribute="bottom" id="a2H-nS-UQo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9SD-Lb-4kC" secondAttribute="trailing" constant="76" id="eiy-Ip-i1G"/>
+                            <constraint firstItem="itG-rQ-hPy" firstAttribute="leading" secondItem="aDq-P2-Rtn" secondAttribute="trailing" constant="9" id="ejE-6G-z2p"/>
+                            <constraint firstItem="COu-Qw-tYn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g8v-id-AHL"/>
+                            <constraint firstItem="itG-rQ-hPy" firstAttribute="top" secondItem="hR3-om-2Oo" secondAttribute="bottom" constant="11" id="hYn-y1-1Ni"/>
+                            <constraint firstItem="hR3-om-2Oo" firstAttribute="top" secondItem="9SD-Lb-4kC" secondAttribute="bottom" constant="27" id="miy-E4-RFm"/>
+                            <constraint firstItem="hR3-om-2Oo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="pzT-Z8-FcA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="COu-Qw-tYn" secondAttribute="bottom" id="qRG-b4-rb2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="aDq-P2-Rtn" secondAttribute="trailing" constant="-44" id="wbL-Qm-6Pg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -57,7 +100,7 @@
         <!--Result-->
         <scene sceneID="gtV-Vs-uuu">
             <objects>
-                <viewController storyboardIdentifier="ResultContainerViewController" automaticallyAdjustsScrollViewInsets="NO" id="zGg-LW-bId" customClass="ResultContainerViewController" customModule="PALADIN_M" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultContainerViewController" automaticallyAdjustsScrollViewInsets="NO" id="zGg-LW-bId" customClass="ResultContainerViewController" customModule="PALIDIN" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zIV-t7-qZU"/>
                         <viewControllerLayoutGuide type="bottom" id="IDz-3F-dTS"/>
@@ -164,7 +207,7 @@
         <!--Result View Controller-->
         <scene sceneID="Ss8-fa-MGd">
             <objects>
-                <viewController storyboardIdentifier="ResultViewController" automaticallyAdjustsScrollViewInsets="NO" id="d5S-7I-rPM" customClass="ResultViewController" customModule="PALADIN_M" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" automaticallyAdjustsScrollViewInsets="NO" id="d5S-7I-rPM" customClass="ResultViewController" customModule="PALIDIN" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qFr-Qh-2zW"/>
                         <viewControllerLayoutGuide type="bottom" id="lFj-X8-icT"/>
@@ -217,7 +260,7 @@
         <!--Result Summary View Controller-->
         <scene sceneID="0gt-dT-Zvm">
             <objects>
-                <viewController storyboardIdentifier="ResultSummaryViewController" id="ebM-xy-DlS" customClass="ResultSummaryViewController" customModule="PALADIN_M" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultSummaryViewController" id="ebM-xy-DlS" customClass="ResultSummaryViewController" customModule="PALIDIN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rGy-nQ-C6K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -327,7 +370,7 @@
         <!--Result Text Data View Controller-->
         <scene sceneID="g9Q-Xa-3py">
             <objects>
-                <viewController storyboardIdentifier="ResultTextDataViewController" id="jW5-t4-v4G" customClass="ResultTextDataViewController" customModule="PALADIN_M" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultTextDataViewController" id="jW5-t4-v4G" customClass="ResultTextDataViewController" customModule="PALIDIN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dcP-Eb-4iF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,7 +436,7 @@
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.13725490200000001" green="0.1215686275" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="fieldTypeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fieldTypeCell" rowHeight="80" id="qeB-wp-del" customClass="DocumentFieldTypeCellTableViewCell" customModule="PALADIN_M" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="fieldTypeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fieldTypeCell" rowHeight="80" id="qeB-wp-del" customClass="DocumentFieldTypeCellTableViewCell" customModule="PALIDIN" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qeB-wp-del" id="5Oe-c8-OfO">
@@ -504,7 +547,7 @@
         <!--Doc Reader Dispatch View Controller-->
         <scene sceneID="oCc-bc-KXR">
             <objects>
-                <viewController storyboardIdentifier="DispatchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g1i-P2-XfS" customClass="DocReaderDispatchViewController" customModule="PALADIN_M" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DispatchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g1i-P2-XfS" customClass="DocReaderDispatchViewController" customModule="PALIDIN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DxS-zX-HVg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -519,7 +562,7 @@
         <!--Passive Face Liveness Manager View Controller-->
         <scene sceneID="Jm9-dS-dfY">
             <objects>
-                <viewController storyboardIdentifier="PassiveFaceLivenessManagerViewController" id="c0X-tc-XyE" customClass="PassiveFaceLivenessManagerViewController" customModule="PALADIN_M" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PassiveFaceLivenessManagerViewController" id="c0X-tc-XyE" customClass="PassiveFaceLivenessManagerViewController" customModule="PALIDIN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ydD-lo-OQx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
