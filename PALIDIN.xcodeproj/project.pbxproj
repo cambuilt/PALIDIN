@@ -106,7 +106,7 @@
 		CF307AE021EFFFAF000DB286 /* ResultSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSummaryViewController.swift; sourceTree = "<group>"; };
 		CF307B5821F25259000DB286 /* ResultTextDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTextDataViewController.swift; sourceTree = "<group>"; };
 		CF307B5D21F25773000DB286 /* ResultContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultContainerViewController.swift; sourceTree = "<group>"; };
-		CFEBF16C21750D6A00646823 /* PALADIN.M.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PALADIN.M.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFEBF16C21750D6A00646823 /* PALADIN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PALADIN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEBF16F21750D6A00646823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFEBF17121750D6B00646823 /* DocReaderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocReaderMainViewController.swift; sourceTree = "<group>"; };
 		CFEBF17621750D9300646823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 				9B9FD2B7235B6E2F004BA90D /* XLPagerTabStrip.framework */,
 				9B9FD2B4235B6E24004BA90D /* DocumentReaderCore.framework */,
 				9B9FD2B0235B6E15004BA90D /* DocumentReader.framework */,
-				CFEBF16E21750D6A00646823 /* PALADIN.M */,
+				CFEBF16E21750D6A00646823 /* PALADIN */,
 				CFEBF16D21750D6A00646823 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -163,12 +163,12 @@
 		CFEBF16D21750D6A00646823 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CFEBF16C21750D6A00646823 /* PALADIN.M.app */,
+				CFEBF16C21750D6A00646823 /* PALADIN.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CFEBF16E21750D6A00646823 /* PALADIN.M */ = {
+		CFEBF16E21750D6A00646823 /* PALADIN */ = {
 			isa = PBXGroup;
 			children = (
 				CFF0AE782238645600D32982 /* Liveness */,
@@ -185,7 +185,7 @@
 				CFEBF17B21750D9400646823 /* Info.plist */,
 				9B256F382354E09200565AFC /* Launch.storyboard */,
 			);
-			path = PALADIN.M;
+			path = PALADIN;
 			sourceTree = "<group>";
 		};
 		CFEBF1902175390100646823 /* Beans */ = {
@@ -243,9 +243,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CFEBF16B21750D6A00646823 /* PALADIN.M */ = {
+		CFEBF16B21750D6A00646823 /* PALADIN */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFEBF17E21750D9400646823 /* Build configuration list for PBXNativeTarget "PALADIN.M" */;
+			buildConfigurationList = CFEBF17E21750D9400646823 /* Build configuration list for PBXNativeTarget "PALADIN" */;
 			buildPhases = (
 				CFEBF16821750D6A00646823 /* Sources */,
 				CFEBF16921750D6A00646823 /* Frameworks */,
@@ -257,9 +257,9 @@
 			);
 			dependencies = (
 			);
-			name = PALADIN.M;
+			name = PALADIN;
 			productName = AwDocReaderDemo;
-			productReference = CFEBF16C21750D6A00646823 /* PALADIN.M.app */;
+			productReference = CFEBF16C21750D6A00646823 /* PALADIN.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -277,7 +277,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CFEBF16721750D6A00646823 /* Build configuration list for PBXProject "PALADIN.M" */;
+			buildConfigurationList = CFEBF16721750D6A00646823 /* Build configuration list for PBXProject "PALIDIN" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -290,7 +290,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CFEBF16B21750D6A00646823 /* PALADIN.M */,
+				CFEBF16B21750D6A00646823 /* PALADIN */,
 			);
 		};
 /* End PBXProject section */
@@ -505,14 +505,14 @@
 					"$(inherited)",
 					__IOS__,
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/PALADIN.M/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PALADIN/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.paladin.m;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.paladin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -533,14 +533,14 @@
 					"$(PROJECT_DIR)/frameworks",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = __IOS__;
-				INFOPLIST_FILE = "$(SRCROOT)/PALADIN.M/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PALADIN/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.paladin.m;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.paladin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -551,7 +551,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CFEBF16721750D6A00646823 /* Build configuration list for PBXProject "PALADIN.M" */ = {
+		CFEBF16721750D6A00646823 /* Build configuration list for PBXProject "PALIDIN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CFEBF17C21750D9400646823 /* Debug */,
@@ -560,7 +560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CFEBF17E21750D9400646823 /* Build configuration list for PBXNativeTarget "PALADIN.M" */ = {
+		CFEBF17E21750D9400646823 /* Build configuration list for PBXNativeTarget "PALADIN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CFEBF17F21750D9400646823 /* Debug */,
