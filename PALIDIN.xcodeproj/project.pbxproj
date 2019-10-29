@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		9B256F392354E09200565AFC /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B256F382354E09200565AFC /* Launch.storyboard */; };
-		9B76924D2368D8860075667C /* DocumentReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76924C2368D8860075667C /* DocumentReader.framework */; };
-		9B76924E2368D8860075667C /* DocumentReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76924C2368D8860075667C /* DocumentReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9B7692502368D8940075667C /* DocumentReaderCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76924F2368D8940075667C /* DocumentReaderCore.framework */; };
-		9B7692512368D8940075667C /* DocumentReaderCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76924F2368D8940075667C /* DocumentReaderCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9B7692532368D8A20075667C /* FaceLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7692522368D8A20075667C /* FaceLiveness.framework */; };
-		9B7692542368D8A20075667C /* FaceLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7692522368D8A20075667C /* FaceLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9B7692562368D8B20075667C /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7692552368D8B20075667C /* XLPagerTabStrip.framework */; };
-		9B7692572368D8B20075667C /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7692552368D8B20075667C /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9B7692592368D8B90075667C /* PassiveFaceLivenessSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7692582368D8B90075667C /* PassiveFaceLivenessSDK.framework */; };
-		9B76925A2368D8B90075667C /* PassiveFaceLivenessSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7692582368D8B90075667C /* PassiveFaceLivenessSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B76925F2368D9850075667C /* DocumentReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925B2368D9850075667C /* DocumentReader.framework */; };
+		9B7692602368D9850075667C /* DocumentReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925B2368D9850075667C /* DocumentReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B7692612368D9850075667C /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925C2368D9850075667C /* XLPagerTabStrip.framework */; };
+		9B7692622368D9850075667C /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925C2368D9850075667C /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B7692632368D9850075667C /* DocumentReaderCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925D2368D9850075667C /* DocumentReaderCore.framework */; };
+		9B7692642368D9850075667C /* DocumentReaderCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925D2368D9850075667C /* DocumentReaderCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B7692652368D9850075667C /* FaceLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925E2368D9850075667C /* FaceLiveness.framework */; };
+		9B7692662368D9850075667C /* FaceLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925E2368D9850075667C /* FaceLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B7692682368D98E0075667C /* PassiveFaceLivenessSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7692672368D98E0075667C /* PassiveFaceLivenessSDK.framework */; };
+		9B7692692368D98E0075667C /* PassiveFaceLivenessSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7692672368D98E0075667C /* PassiveFaceLivenessSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B9FD2CA235B7094004BA90D /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2C9235B7094004BA90D /* CommonUtils.swift */; };
 		9B9FD2CC235B70AF004BA90D /* AuthenticationConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2CB235B70AF004BA90D /* AuthenticationConnectionHandler.swift */; };
 		9B9FD2CE235B70C1004BA90D /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2CD235B70C1004BA90D /* CommonConstants.swift */; };
@@ -62,11 +62,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9B76925A2368D8B90075667C /* PassiveFaceLivenessSDK.framework in Embed Frameworks */,
-				9B76924E2368D8860075667C /* DocumentReader.framework in Embed Frameworks */,
-				9B7692572368D8B20075667C /* XLPagerTabStrip.framework in Embed Frameworks */,
-				9B7692542368D8A20075667C /* FaceLiveness.framework in Embed Frameworks */,
-				9B7692512368D8940075667C /* DocumentReaderCore.framework in Embed Frameworks */,
+				9B7692692368D98E0075667C /* PassiveFaceLivenessSDK.framework in Embed Frameworks */,
+				9B7692642368D9850075667C /* DocumentReaderCore.framework in Embed Frameworks */,
+				9B7692602368D9850075667C /* DocumentReader.framework in Embed Frameworks */,
+				9B7692662368D9850075667C /* FaceLiveness.framework in Embed Frameworks */,
+				9B7692622368D9850075667C /* XLPagerTabStrip.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,11 +75,11 @@
 
 /* Begin PBXFileReference section */
 		9B256F382354E09200565AFC /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
-		9B76924C2368D8860075667C /* DocumentReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReader.framework; path = frameworks/DocumentReader.framework; sourceTree = "<group>"; };
-		9B76924F2368D8940075667C /* DocumentReaderCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReaderCore.framework; path = frameworks/DocumentReaderCore.framework; sourceTree = "<group>"; };
-		9B7692522368D8A20075667C /* FaceLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceLiveness.framework; path = frameworks/FaceLiveness.framework; sourceTree = "<group>"; };
-		9B7692552368D8B20075667C /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = frameworks/XLPagerTabStrip.framework; sourceTree = "<group>"; };
-		9B7692582368D8B90075667C /* PassiveFaceLivenessSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PassiveFaceLivenessSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B76925B2368D9850075667C /* DocumentReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReader.framework; path = frameworks/DocumentReader.framework; sourceTree = "<group>"; };
+		9B76925C2368D9850075667C /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = frameworks/XLPagerTabStrip.framework; sourceTree = "<group>"; };
+		9B76925D2368D9850075667C /* DocumentReaderCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReaderCore.framework; path = frameworks/DocumentReaderCore.framework; sourceTree = "<group>"; };
+		9B76925E2368D9850075667C /* FaceLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceLiveness.framework; path = frameworks/FaceLiveness.framework; sourceTree = "<group>"; };
+		9B7692672368D98E0075667C /* PassiveFaceLivenessSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PassiveFaceLivenessSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B9FD2C9235B7094004BA90D /* CommonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		9B9FD2CB235B70AF004BA90D /* AuthenticationConnectionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationConnectionHandler.swift; sourceTree = "<group>"; };
 		9B9FD2CD235B70C1004BA90D /* CommonConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
@@ -124,11 +124,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B7692592368D8B90075667C /* PassiveFaceLivenessSDK.framework in Frameworks */,
-				9B76924D2368D8860075667C /* DocumentReader.framework in Frameworks */,
-				9B7692562368D8B20075667C /* XLPagerTabStrip.framework in Frameworks */,
-				9B7692532368D8A20075667C /* FaceLiveness.framework in Frameworks */,
-				9B7692502368D8940075667C /* DocumentReaderCore.framework in Frameworks */,
+				9B7692682368D98E0075667C /* PassiveFaceLivenessSDK.framework in Frameworks */,
+				9B7692632368D9850075667C /* DocumentReaderCore.framework in Frameworks */,
+				9B76925F2368D9850075667C /* DocumentReader.framework in Frameworks */,
+				9B7692652368D9850075667C /* FaceLiveness.framework in Frameworks */,
+				9B7692612368D9850075667C /* XLPagerTabStrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,11 +150,11 @@
 		CFEBF16321750D6A00646823 = {
 			isa = PBXGroup;
 			children = (
-				9B7692582368D8B90075667C /* PassiveFaceLivenessSDK.framework */,
-				9B7692552368D8B20075667C /* XLPagerTabStrip.framework */,
-				9B7692522368D8A20075667C /* FaceLiveness.framework */,
-				9B76924F2368D8940075667C /* DocumentReaderCore.framework */,
-				9B76924C2368D8860075667C /* DocumentReader.framework */,
+				9B7692672368D98E0075667C /* PassiveFaceLivenessSDK.framework */,
+				9B76925B2368D9850075667C /* DocumentReader.framework */,
+				9B76925D2368D9850075667C /* DocumentReaderCore.framework */,
+				9B76925E2368D9850075667C /* FaceLiveness.framework */,
+				9B76925C2368D9850075667C /* XLPagerTabStrip.framework */,
 				CFEBF16E21750D6A00646823 /* PALIDIN */,
 				CFEBF16D21750D6A00646823 /* Products */,
 			);
