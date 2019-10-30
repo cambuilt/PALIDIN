@@ -11,14 +11,12 @@
 
 import UIKit
 
-class DocReaderMainViewController: UIViewController {
+class DocReaderMainViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
 
   var alertController: UIAlertController?
   var spinnerIndicator: UIActivityIndicatorView?
   var firstTime = true, closedByUser = false
-  @IBOutlet weak var labelTitle: UILabel!
-  @IBOutlet weak var buttonID: UIButton!
-
+  
   override func viewWillAppear(_ animated: Bool) {
       self.navigationController?.setNavigationBarHidden(true, animated: true)
       super.viewWillAppear(animated)
@@ -38,15 +36,22 @@ class DocReaderMainViewController: UIViewController {
     } else {
       if firstTime == true {
         firstTime = false;
-//        startCameraCaptureBtnPressed(buttonID)
       } else {
         firstTime = true
       }
     }
   }
-
+  
   @IBAction func startCameraCaptureBtnPressed(_ sender: UIButton) {
+    if let countDownViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CountDownViewController") as? CountDownViewController {
+      countDownViewController.rotate = true
+      present(countDownViewController, animated: true, completion: nil)
+    }
+  }
+  
+  func captureImages() {
     let dispatchViewController = self.storyboard?.instantiateViewController(withIdentifier: "DispatchViewController") as! DocReaderDispatchViewController
+    
     dispatchViewController.setDocumentProofCaptureCallback { (success, message, docProofCapturedMessage) in
       if success {
         if let docProofCapturedMessage = docProofCapturedMessage {
@@ -72,7 +77,6 @@ class DocReaderMainViewController: UIViewController {
               })
             }
           }
-          
         }
       }
       else {

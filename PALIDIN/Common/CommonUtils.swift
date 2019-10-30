@@ -20,13 +20,13 @@ class CommonUtils {
             let documentBuffer = docProofMsg.documentBuffer,
             documentBuffer.count > 0 {
             
-            var documentAuthenticationRequest = DocumentAuthenticationRequest()
+            let documentAuthenticationRequest = DocumentAuthenticationRequest()
             
             // documents
-            var documentsInfo = DocumentsInfo()
+            let documentsInfo = DocumentsInfo()
             var documentImage = [DocumentImage]()
             for docBuffer in documentBuffer {
-                var docImage = DocumentImage()
+                let docImage = DocumentImage()
                 docImage.format = ".jpg"
                 docImage.lightingScheme = 6
                 guard let docImageBase64String = CommonUtils.convertBytesArrayToBase64String(bytesArray: docBuffer) else {return nil}

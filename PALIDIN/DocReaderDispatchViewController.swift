@@ -45,7 +45,8 @@ public class DocReaderDispatchViewController: UIViewController {
         docReaderViewController.setCompleteCallback(callback: { [unowned self] (success, message, buffer) in
             if success, let documentBuffer = buffer {
                 self.docAndBiometricsCapturedMessage.documentBuffer = documentBuffer
-                self.startFaceLivenessCapture()
+                self.displayDocConfirm()
+                // self.startFaceLivenessCapture()
             }
             else {
                 var errorMessage: String?
@@ -57,11 +58,24 @@ public class DocReaderDispatchViewController: UIViewController {
                 })
             }
         })
+        print("Presenting DocReaderViewController")
         self.present(docReaderViewController, animated: true, completion: nil)
+    }
+  
+    private func displayDocConfirm() {
+      self.docAndBiometricsCapturedMessage.faceBuffer = self.docAndBiometricsCapturedMessage.documentBuffer![0]
+      if let docAuthenticationRequest = CommonUtils.convertDocProofCapturedMsgToDocAuthRequest(docAndBiometricsCapturedMessage: self.docAndBiometricsCapturedMessage) {
+        if let docConfirmViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DocConfirmViewController") as? DocConfirmViewController {
+          if let frontImage = docAuthenticationRequest.documentsInfo!.documentImage![0].image, let backImage = docAuthenticationRequest.documentsInfo!.documentImage![1].image {
+            docConfirmViewController.frontSideImageString = frontImage
+            docConfirmViewController.backSideImageString = backImage
+            self.present(docConfirmViewController, animated: true, completion: nil)
+          }
+        }
+      }
     }
     
     private func startFaceLivenessCapture() {
-        
         initWaitingAlert(message: "Initializing Face Capture")
         self.present(alertController!, animated: true) {
             let faceLivenessCaptureViewController = self.storyboard?.instantiateViewController(withIdentifier: "PassiveFaceLivenessManagerViewController") as! PassiveFaceLivenessManagerViewController

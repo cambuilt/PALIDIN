@@ -38,6 +38,9 @@
 		9B9FD2ED235B70E3004BA90D /* DocumentAuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2DD235B70E3004BA90D /* DocumentAuthenticationRequest.swift */; };
 		9B9FD2EE235B70E3004BA90D /* DocAndBiometricsCapturedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2DE235B70E3004BA90D /* DocAndBiometricsCapturedMessage.swift */; };
 		9B9FD2F0235B732C004BA90D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9FD2EF235B732C004BA90D /* Main.storyboard */; };
+		9BDD87062369D4E100AE3903 /* titleLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BDD87052369D4E100AE3903 /* titleLogo.png */; };
+		9BDD87082369E38300AE3903 /* CountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD87072369E38300AE3903 /* CountDownViewController.swift */; };
+		9BDD870A2369FD2700AE3903 /* DocConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD87092369FD2700AE3903 /* DocConfirmViewController.swift */; };
 		9BE456E62368ABD4004093A7 /* screenLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE456E52368ABD3004093A7 /* screenLogo.png */; };
 		CF307AB221ED385B000DB286 /* regula.license in Resources */ = {isa = PBXBuildFile; fileRef = CF307AB121ED385B000DB286 /* regula.license */; };
 		CF307AC421EFD4BD000DB286 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF307AC321EFD4BD000DB286 /* ResultViewController.swift */; };
@@ -100,6 +103,9 @@
 		9B9FD2DD235B70E3004BA90D /* DocumentAuthenticationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentAuthenticationRequest.swift; sourceTree = "<group>"; };
 		9B9FD2DE235B70E3004BA90D /* DocAndBiometricsCapturedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocAndBiometricsCapturedMessage.swift; sourceTree = "<group>"; };
 		9B9FD2EF235B732C004BA90D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9BDD87052369D4E100AE3903 /* titleLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleLogo.png; sourceTree = "<group>"; };
+		9BDD87072369E38300AE3903 /* CountDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownViewController.swift; sourceTree = "<group>"; };
+		9BDD87092369FD2700AE3903 /* DocConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocConfirmViewController.swift; sourceTree = "<group>"; };
 		9BE456E52368ABD3004093A7 /* screenLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenLogo.png; sourceTree = "<group>"; };
 		CF307AB121ED385B000DB286 /* regula.license */ = {isa = PBXFileReference; lastKnownFileType = file; path = regula.license; sourceTree = "<group>"; };
 		CF307AC321EFD4BD000DB286 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -178,12 +184,15 @@
 				CFEBF1902175390100646823 /* Beans */,
 				CFEBF16F21750D6A00646823 /* AppDelegate.swift */,
 				9BE456E52368ABD3004093A7 /* screenLogo.png */,
+				9BDD87052369D4E100AE3903 /* titleLogo.png */,
 				CFEBF17121750D6B00646823 /* DocReaderMainViewController.swift */,
 				CFF0AE6C22384C9E00D32982 /* DocReaderDispatchViewController.swift */,
 				9B9FD2EF235B732C004BA90D /* Main.storyboard */,
 				CFEBF17621750D9300646823 /* Assets.xcassets */,
 				CFEBF17B21750D9400646823 /* Info.plist */,
 				9B256F382354E09200565AFC /* Launch.storyboard */,
+				9BDD87072369E38300AE3903 /* CountDownViewController.swift */,
+				9BDD87092369FD2700AE3903 /* DocConfirmViewController.swift */,
 			);
 			path = PALIDIN;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BDD87062369D4E100AE3903 /* titleLogo.png in Resources */,
 				CFEBF17721750D9300646823 /* Assets.xcassets in Resources */,
 				9B9FD2F0235B732C004BA90D /* Main.storyboard in Resources */,
 				9BE456E62368ABD4004093A7 /* screenLogo.png in Resources */,
@@ -345,6 +355,7 @@
 				9B9FD2E1235B70E3004BA90D /* FieldValidationResult.swift in Sources */,
 				9B9FD2E8235B70E3004BA90D /* DocumentAuthenticationResponse.swift in Sources */,
 				9B9FD2E2235B70E3004BA90D /* BiometricsAuthenticationResult.swift in Sources */,
+				9BDD87082369E38300AE3903 /* CountDownViewController.swift in Sources */,
 				CFF0AE7622384C9E00D32982 /* DocReaderViewController.swift in Sources */,
 				CF307AC421EFD4BD000DB286 /* ResultViewController.swift in Sources */,
 				CFF0AE80223869B400D32982 /* PassiveFaceLivenessManagerViewController.swift in Sources */,
@@ -361,6 +372,7 @@
 				CFF0AE852239537100D32982 /* PassiveFaceLivenessHelpers.swift in Sources */,
 				9B9FD2EA235B70E3004BA90D /* Modality.swift in Sources */,
 				CF307B5E21F25773000DB286 /* ResultContainerViewController.swift in Sources */,
+				9BDD870A2369FD2700AE3903 /* DocConfirmViewController.swift in Sources */,
 				9B9FD2E7235B70E3004BA90D /* DocumentAuthenticationResult.swift in Sources */,
 				CF307B5921F25259000DB286 /* ResultTextDataViewController.swift in Sources */,
 				E9FE9B4A21F6250D002AD5D3 /* DocumentFieldTypeCellTableViewCell.swift in Sources */,
@@ -511,7 +523,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.palidin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.paladin.m;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,7 +550,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.palidin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.paladin.m;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -18,12 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="screenLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="pop-fc-neG">
-                                <rect key="frame" x="67" y="342" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="pop-fc-neG">
+                                <rect key="frame" x="67" y="274" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="WRl-Du-6Hd"/>
+                                    <constraint firstAttribute="height" constant="128" id="ggG-pd-g24"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile ID Document Authentication " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWY-aw-e2a">
+                                <rect key="frame" x="42" y="419" width="291" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.1215686275" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pop-fc-neG" firstAttribute="leading" secondItem="iq3-3k-9xp" secondAttribute="leading" constant="67" id="PQu-jf-wNF"/>
+                            <constraint firstItem="pop-fc-neG" firstAttribute="top" secondItem="iq3-3k-9xp" secondAttribute="top" constant="230" id="tny-QS-Sne"/>
+                            <constraint firstItem="AWY-aw-e2a" firstAttribute="centerX" secondItem="iq3-3k-9xp" secondAttribute="centerX" id="zus-hC-4Rm"/>
+                            <constraint firstItem="AWY-aw-e2a" firstAttribute="top" secondItem="iq3-3k-9xp" secondAttribute="top" constant="375" id="zyP-ps-ofX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iq3-3k-9xp"/>
                     </view>
                 </viewController>
@@ -33,6 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="screenLogo.png" width="49.919998168945312" height="62.880001068115234"/>
+        <image name="titleLogo.png" width="560" height="715"/>
     </resources>
 </document>
