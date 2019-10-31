@@ -57,11 +57,11 @@ class ResultTextDataViewController: UIViewController, IndicatorInfoProvider,  UI
         cell.fieldTypeNameLabel.text = fieldType.name!
         cell.barcodeLabel.text = fieldType.fieldResult?.barcode != nil ? fieldType.fieldResult?.barcode! : ""
         cell.ocrLabel.text = fieldType.fieldResult?.visual != nil ? fieldType.fieldResult?.visual! : ""
-        cell.isValidLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cell.fieldTypeNameLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        cell.isValidLabel.textColor = #colorLiteral(red: 0.137254902, green: 0.1215686275, blue: 0.1254901961, alpha: 1)
+        cell.fieldTypeNameLabel.textColor = #colorLiteral(red: 0.137254902, green: 0.1215686275, blue: 0.1254901961, alpha: 1)
         cell.barcodeOCRMatchingLabel.text = (fieldType.fieldResult?.visualBarcodeCompareValid == FieldComparisonResult.COMPARE_TRUE.rawValue) ? "✅" : (fieldType.fieldResult?.visualBarcodeCompareValid == FieldComparisonResult.COMPARE_FALSE.rawValue) ? "❌" : "❔"
-        cell.barcodeLabel.textColor = (fieldType.fieldResult?.isBarcodeStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cell.ocrLabel.textColor = (fieldType.fieldResult?.isVisualStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        cell.barcodeLabel.textColor = (fieldType.fieldResult?.isBarcodeStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : #colorLiteral(red: 0.137254902, green: 0.1215686275, blue: 0.1254901961, alpha: 1)
+        cell.ocrLabel.textColor = (fieldType.fieldResult?.isVisualStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : #colorLiteral(red: 0.137254902, green: 0.1215686275, blue: 0.1254901961, alpha: 1)
         cell.isValidLabel.text = (fieldType.overallResult == AuthenticationResult.OK.rawValue) ? "✅" : (fieldType.overallResult == AuthenticationResult.FAILED.rawValue) ? "❌" : "❔"
       
         cell.indexPath = indexPath

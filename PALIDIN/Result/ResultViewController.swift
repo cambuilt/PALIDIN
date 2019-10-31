@@ -27,11 +27,11 @@ class ResultViewController: ButtonBarPagerTabStripViewController {
     pagerTabStripController.view.backgroundColor = UIColor.clear
     
     let summaryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultSummaryViewController") as! ResultSummaryViewController
-    summaryViewController.tabName = "Summary"
+    summaryViewController.tabName = "SUMMARY"
     summaryViewController.documentAuthenticationResponse = documentAuthenticationResponse
     
     let textDataViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultTextDataViewController") as! ResultTextDataViewController
-    textDataViewController.tabName = "Text Data"
+    textDataViewController.tabName = "TEXT DATA"
     textDataViewController.documentAuthenticationResponse = documentAuthenticationResponse
     
     let childViewControllers = [summaryViewController, textDataViewController]

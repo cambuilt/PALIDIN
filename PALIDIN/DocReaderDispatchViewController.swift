@@ -44,9 +44,9 @@ public class DocReaderDispatchViewController: UIViewController {
         let docReaderViewController = DocReaderViewController(nibName: "DocReaderViewController", bundle: Bundle(for: DocReaderViewController.self))
         docReaderViewController.setCompleteCallback(callback: { [unowned self] (success, message, buffer) in
             if success, let documentBuffer = buffer {
-                self.docAndBiometricsCapturedMessage.documentBuffer = documentBuffer
-                self.displayDocConfirm()
-                // self.startFaceLivenessCapture()
+               self.docAndBiometricsCapturedMessage.documentBuffer = documentBuffer
+               self.displayDocConfirm()
+//                 self.startFaceLivenessCapture()
             }
             else {
                 var errorMessage: String?
@@ -58,7 +58,6 @@ public class DocReaderDispatchViewController: UIViewController {
                 })
             }
         })
-        print("Presenting DocReaderViewController")
         self.present(docReaderViewController, animated: true, completion: nil)
     }
   
@@ -69,6 +68,13 @@ public class DocReaderDispatchViewController: UIViewController {
           if let frontImage = docAuthenticationRequest.documentsInfo!.documentImage![0].image, let backImage = docAuthenticationRequest.documentsInfo!.documentImage![1].image {
             docConfirmViewController.frontSideImageString = frontImage
             docConfirmViewController.backSideImageString = backImage
+            docConfirmViewController.setCallback(callback: { [unowned self] (error) in
+              if !error {
+                self.dismiss(animated: true, completion: {
+                  self.docProofCaptureCallback!(true, nil, self.docAndBiometricsCapturedMessage)
+                })
+              }
+            })
             self.present(docConfirmViewController, animated: true, completion: nil)
           }
         }
@@ -76,40 +82,60 @@ public class DocReaderDispatchViewController: UIViewController {
     }
     
     private func startFaceLivenessCapture() {
-        initWaitingAlert(message: "Initializing Face Capture")
-        self.present(alertController!, animated: true) {
-            let faceLivenessCaptureViewController = self.storyboard?.instantiateViewController(withIdentifier: "PassiveFaceLivenessManagerViewController") as! PassiveFaceLivenessManagerViewController
-            self.isCaptureJustStarted = false
-            faceLivenessCaptureViewController.setCallback(callback: { [unowned self] (error, faceBuffer) in
-                if !error, let capturedImage = faceBuffer {
-                    let dataBeforeCompress = NSData(bytes: capturedImage, length: capturedImage.count)
-                    let uiimageBeforeCompress = UIImage(data: dataBeforeCompress as Data)!
-                    let jpgDataAfterCompress = uiimageBeforeCompress.jpegData(compressionQuality: CGFloat(0.7))
-                    self.docAndBiometricsCapturedMessage.faceBuffer = [UInt8](jpgDataAfterCompress!)
-                    self.dismiss(animated: true, completion: {
-                        self.docProofCaptureCallback!(true, nil, self.docAndBiometricsCapturedMessage)
-                    })
-                }
-                else {
-                    self.dismiss(animated: true, completion: {
-                        self.docProofCaptureCallback!(false, nil, nil)
-                    })
-                }
+      initWaitingAlert(message: "Initializing Face Capture")
+      self.present(alertController!, animated: true) {
+        let faceLivenessCaptureViewController = self.storyboard?.instantiateViewController(withIdentifier: "PassiveFaceLivenessManagerViewController") as! PassiveFaceLivenessManagerViewController
+        self.isCaptureJustStarted = false
+        faceLivenessCaptureViewController.setCallback(callback: { [unowned self] (error, faceBuffer) in
+          if !error, let capturedImage = faceBuffer {
+              let dataBeforeCompress = NSData(bytes: capturedImage, length: capturedImage.count)
+              let uiimageBeforeCompress = UIImage(data: dataBeforeCompress as Data)!
+              let jpgDataAfterCompress = uiimageBeforeCompress.jpegData(compressionQuality: CGFloat(0.7))
+              self.docAndBiometricsCapturedMessage.faceBuffer = [UInt8](jpgDataAfterCompress!)
+              self.dismiss(animated: true, completion: {
+                self.docProofCaptureCallback!(true, nil, self.docAndBiometricsCapturedMessage)
+              })
+          }
+          else {
+            self.dismiss(animated: true, completion: {
+              self.docProofCaptureCallback!(false, nil, nil)
             })
-            self.alertController!.dismiss(animated: true, completion: {
-                self.present(faceLivenessCaptureViewController, animated: true, completion: nil)
-            })
-        }
+          }
+        })
+        self.alertController!.dismiss(animated: true, completion: {
+          self.present(faceLivenessCaptureViewController, animated: true, completion: nil)
+        })
+      }
     }
+
     var alertController: UIAlertController?
     var spinnerIndicator: UIActivityIndicatorView?
     
     private func initWaitingAlert(message: String){
-        alertController = UIAlertController(title: nil, message: message + "..\n\n", preferredStyle: .alert)
-        spinnerIndicator = UIActivityIndicatorView(style: .whiteLarge)
-        spinnerIndicator!.center = CGPoint(x:135.0, y: 65.5)
-        spinnerIndicator!.color = UIColor.black
-        spinnerIndicator!.startAnimating()
-        alertController!.view.addSubview(spinnerIndicator!)
+      alertController = UIAlertController(title: nil, message: message + "..\n\n", preferredStyle: .alert)
+      spinnerIndicator = UIActivityIndicatorView(style: .whiteLarge)
+      spinnerIndicator!.center = CGPoint(x:135.0, y: 65.5)
+      spinnerIndicator!.color = UIColor.black
+      spinnerIndicator!.startAnimating()
+      alertController!.view.addSubview(spinnerIndicator!)
+    }
+  
+    func showAlert(status: String, error: Bool) {
+      var title: String = "Status"
+      if error {
+        title = "Error"
+      }
+      let alert = UIAlertController(title: title,
+                                    message: status,
+                                    preferredStyle: UIAlertController.Style.alert)
+      alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+      self.present(alert, animated:true, completion: nil)
+    }
+  
+    private func displayResultViewController(documentAuthenticationResponse: DocumentAuthenticationResponse) {
+      let resultContainerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultContainerViewController") as! ResultContainerViewController
+      resultContainerViewController.documentAuthenticationResponse = documentAuthenticationResponse
+      resultContainerViewController.navigationItem.rightBarButtonItem = nil
+      self.navigationController?.pushViewController(resultContainerViewController, animated: true)
     }
 }

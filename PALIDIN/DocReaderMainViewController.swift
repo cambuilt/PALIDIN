@@ -18,15 +18,15 @@ class DocReaderMainViewController: UIViewController, UIAdaptivePresentationContr
   var firstTime = true, closedByUser = false
   
   override func viewWillAppear(_ animated: Bool) {
-      self.navigationController?.setNavigationBarHidden(true, animated: true)
-      super.viewWillAppear(animated)
-      AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    self.navigationController?.setNavigationBarHidden(true, animated: true)
+    super.viewWillAppear(animated)
+    AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
   }
   
   override func viewWillDisappear(_ animated: Bool) {
-      self.navigationController?.setNavigationBarHidden(false, animated: true)
-      super.viewWillDisappear(true)
-      AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+    self.navigationController?.setNavigationBarHidden(false, animated: true)
+    super.viewWillDisappear(true)
+    AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -100,7 +100,8 @@ class DocReaderMainViewController: UIViewController, UIAdaptivePresentationContr
     let resultContainerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultContainerViewController") as! ResultContainerViewController
     resultContainerViewController.documentAuthenticationResponse = documentAuthenticationResponse
     resultContainerViewController.navigationItem.rightBarButtonItem = nil
-    self.navigationController?.pushViewController(resultContainerViewController, animated: true)
+    self.navigationController?.pushViewController(resultContainerViewController, animated: false)
+    self.view.isHidden = false
   }
   
   func showAlert(status: String, error: Bool) {
