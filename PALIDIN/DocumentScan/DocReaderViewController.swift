@@ -81,6 +81,7 @@ class DocReaderViewController: UIViewController {
               
               DocReader.shared.processParams.scenario = "Locate"
               DocReader.shared.processParams.multipageProcessing = true
+              DocReader.shared.processParams.disableFocusingCheck = false
               
               DocReader.shared.customization.cameraFrameShapeType = CameraFrameShapeType.corners
               DocReader.shared.customization.cameraFrameLineLength = 100
@@ -90,9 +91,11 @@ class DocReaderViewController: UIViewController {
               DocReader.shared.customization.showStatusMessages = false
               
               DocReader.shared.functionality.orientation = UIInterfaceOrientationMask.landscape
-              DocReader.shared.functionality.videoCaptureMotionControl = false
+              DocReader.shared.functionality.videoCaptureMotionControl = true
               DocReader.shared.functionality.showTorchButton = false
               DocReader.shared.functionality.showSkipNextPageButton = false
+              DocReader.shared.functionality.showCaptureButton = true
+              DocReader.shared.functionality.skipFocusingFrames = true
               
               /*
                // help image before capturing
@@ -161,7 +164,7 @@ class DocReaderViewController: UIViewController {
   
   func handleResult(result: DocumentReaderResults?) {
     guard let result = result else {
-      self.dismiss(animated: true) {
+      self.dismiss(animated: false) {
         self.docReaderCompleteCallback!(false, nil, nil)
       }
       return
@@ -183,7 +186,7 @@ class DocReaderViewController: UIViewController {
     //        if let backImageRaw: UIImage = result.getGraphicFieldImage(by: .documentRear, source: .rawImage), let data = backImageRaw.jpegData(compressionQuality: CGFloat(1.0)) {
     //            documentBuffer.append([UInt8](data))
     //        }
-    self.dismiss(animated: true) {
+    self.dismiss(animated: false) {
       if documentBuffer.count > 0 {
         self.docReaderCompleteCallback!(true, nil, documentBuffer)
       }

@@ -24,6 +24,6 @@ class CommonConstants {
     static let ANALYZE_VIDEO_URL = LIVENESS_CHECK_SERVICE_BASE + "/analyze_video"
     
     static let defaultDisplayMode: String = "standard"
-    static let defaultWorkflow: String = "Charlie2"
+    static let defaultWorkflow: String = "Charlie4"
     static let defaultVideoLivenessThreshold: Double = 50.0
 }

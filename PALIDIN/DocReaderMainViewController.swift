@@ -45,7 +45,7 @@ class DocReaderMainViewController: UIViewController, UIAdaptivePresentationContr
   @IBAction func startCameraCaptureBtnPressed(_ sender: UIButton) {
     if let countDownViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CountDownViewController") as? CountDownViewController {
       countDownViewController.rotate = true
-      present(countDownViewController, animated: true, completion: nil)
+      present(countDownViewController, animated: false, completion: nil)
     }
   }
   
@@ -58,10 +58,11 @@ class DocReaderMainViewController: UIViewController, UIAdaptivePresentationContr
           if let docAuthenticationRequest = CommonUtils.convertDocProofCapturedMsgToDocAuthRequest(docAndBiometricsCapturedMessage: docProofCapturedMessage) {
             self.initWaitingAlert(message: "Waiting for result")
             DispatchQueue.main.async {
-              self.present(self.alertController!, animated: true, completion: {
+              self.present(self.alertController!, animated: false, completion: {
                 DocAuthHandler.sendAuthenticationRequest(docAuthenticationRequest: docAuthenticationRequest) {
                   (success: Bool, response: DocumentAuthenticationResponse?, errorMessage: String?) in
                   DispatchQueue.main.async {
+                    print(response!.overallAuthenticationResult!)
                     self.alertController?.dismiss(animated: true, completion: {
                       if success, let documentAuthenticationResponse = response {
                         DispatchQueue.main.async {
@@ -93,7 +94,7 @@ class DocReaderMainViewController: UIViewController, UIAdaptivePresentationContr
         }
       }
     }
-    self.present(dispatchViewController, animated: true, completion: nil)
+    self.present(dispatchViewController, animated: false, completion: nil)
   }
   
   private func displayResultViewController(documentAuthenticationResponse: DocumentAuthenticationResponse) {

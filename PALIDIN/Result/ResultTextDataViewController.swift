@@ -47,7 +47,7 @@ class ResultTextDataViewController: UIViewController, IndicatorInfoProvider,  UI
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return (fieldTypes?.count)!
+         return fieldTypes?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

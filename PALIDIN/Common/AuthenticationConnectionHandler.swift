@@ -26,6 +26,7 @@ class DocAuthHandler {
             let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in    
                 if error == nil, let data = data {
                     let decodedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+                    print(decodedString!)
                     if (decodedString?.contains("ERROR"))! {
                         var errorMessage = "Unexpected Error"
                         do {

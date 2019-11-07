@@ -40,8 +40,10 @@ class DocConfirmViewController: UIViewController {
   
   private func startFaceLivenessCapture() {
     view.isHidden = true
-    initWaitingAlert(message: "Initializing Face Capture")
-    self.present(alertController!, animated: true) {
+    let countDownViewController = self.storyboard?.instantiateViewController(withIdentifier: "CountDownViewController") as! CountDownViewController
+    countDownViewController.rotate = false
+    present(countDownViewController, animated: false, completion: nil)
+    countDownViewController.setCallback(callback: { [unowned self] () in
       let faceLivenessCaptureViewController = self.storyboard?.instantiateViewController(withIdentifier: "PassiveFaceLivenessManagerViewController") as! PassiveFaceLivenessManagerViewController
       self.isCaptureJustStarted = false
       faceLivenessCaptureViewController.setCallback(callback: { [unowned self] (error, faceBuffer) in
@@ -60,10 +62,8 @@ class DocConfirmViewController: UIViewController {
           })
         }
       })
-      self.alertController!.dismiss(animated: true, completion: {
-        self.present(faceLivenessCaptureViewController, animated: true, completion: nil)
-      })
-    }
+      self.present(faceLivenessCaptureViewController, animated: true, completion: nil)
+    })
   }
  
   private func initWaitingAlert(message: String){

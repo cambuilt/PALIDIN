@@ -59,7 +59,7 @@ public class PassiveFaceLivenessManagerViewController: UIViewController, ServerR
     if PassiveFaceLivenessManagerViewController.livenessAppUIClientServerViewController == nil {
       
       // Setup and prejjsent
-      PassiveFaceLivenessManagerViewController.livenessAppUIClientServerViewController = UIStoryboard(name: "PassiveFaceLiveness", bundle: Bundle.init(identifier: "com.aware.auth.PassiveFaceLivenessSDK")).instantiateViewController(withIdentifier: "LivenessAppUIClientServerViewController") as! LivenessAppUIClientServerViewController
+      PassiveFaceLivenessManagerViewController.livenessAppUIClientServerViewController = UIStoryboard(name: "PassiveFaceLiveness", bundle: Bundle.init(identifier: "com.aware.auth.PassiveFaceLivenessSDK")).instantiateViewController(withIdentifier: "LivenessAppUIClientServerViewController") as? LivenessAppUIClientServerViewController
       PassiveFaceLivenessManagerViewController.livenessAppUIClientServerViewController?.setBioSPLivenessCheckingUrl(url: CommonConstants.ANALYZE_VIDEO_URL)
       PassiveFaceLivenessManagerViewController.livenessAppUIClientServerViewController?.setBioSPServerCredentials(username: CommonConstants.serviceUsername, password: CommonConstants.servicePassword)
     }
@@ -95,7 +95,7 @@ public class PassiveFaceLivenessManagerViewController: UIViewController, ServerR
       // Is content of result ok:
       if isSuccess, restCommand == ClientRestCommand.analyze {
         
-        let title = NSLocalizedString("CAPTURE", comment: "")
+//        let title = NSLocalizedString("CAPTURE", comment: "")
         
         // Unpack the JSON response
         do {
@@ -213,27 +213,27 @@ public class PassiveFaceLivenessManagerViewController: UIViewController, ServerR
     
     var error = false
     var actionText = "OK"
-    var statusText = NSLocalizedString("Success", comment: "")
+//    var statusText = NSLocalizedString("Success", comment: "")
     
     if imageData == nil || imageData?.count == 0 {
       actionText = "OK - NO Image"
-      statusText = NSLocalizedString("Try Again", comment: "")
+//      statusText = NSLocalizedString("Try Again", comment: "")
       error = true
     }
     if isLivenessWorkflow == true && isLive == false {
-      statusText = NSLocalizedString("Try Again", comment: "")
+//      statusText = NSLocalizedString("Try Again", comment: "")
       error = true
     }
     let cmd = restCommand
-    var header = NSLocalizedString(cmd?.rawValue ?? "CAPTURE", comment: "")
+    let header = NSLocalizedString(cmd?.rawValue ?? "CAPTURE", comment: "")
     let colorized = PassiveFaceLivenessHelpers.colorizeMessage(message: message)
-    var alertController = UIAlertController(
+    let alertController = UIAlertController(
       title: header,
       message: message,
       preferredStyle: .alert)
     alertController.setValue(colorized, forKey: "attributedMessage")
     
-    let alertWidth = alertController.view.frame.size.width
+    _ = alertController.view.frame.size.width
     var image: UIImage?
     if let imgData = imageData {
       if imgData.count > 0 {

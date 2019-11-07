@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B209D0C2373877C00C5108C /* DocumentReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B209D0B2373877C00C5108C /* DocumentReader.framework */; };
+		9B209D0D2373877C00C5108C /* DocumentReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B209D0B2373877C00C5108C /* DocumentReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B209D0F2373878700C5108C /* DocumentReaderCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B209D0E2373878700C5108C /* DocumentReaderCore.framework */; };
+		9B209D102373878700C5108C /* DocumentReaderCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B209D0E2373878700C5108C /* DocumentReaderCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B256F392354E09200565AFC /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B256F382354E09200565AFC /* Launch.storyboard */; };
-		9B76925F2368D9850075667C /* DocumentReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925B2368D9850075667C /* DocumentReader.framework */; };
-		9B7692602368D9850075667C /* DocumentReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925B2368D9850075667C /* DocumentReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B7692612368D9850075667C /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925C2368D9850075667C /* XLPagerTabStrip.framework */; };
 		9B7692622368D9850075667C /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925C2368D9850075667C /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9B7692632368D9850075667C /* DocumentReaderCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925D2368D9850075667C /* DocumentReaderCore.framework */; };
-		9B7692642368D9850075667C /* DocumentReaderCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925D2368D9850075667C /* DocumentReaderCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B7692652368D9850075667C /* FaceLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925E2368D9850075667C /* FaceLiveness.framework */; };
 		9B7692662368D9850075667C /* FaceLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925E2368D9850075667C /* FaceLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B7692682368D98E0075667C /* PassiveFaceLivenessSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7692672368D98E0075667C /* PassiveFaceLivenessSDK.framework */; };
@@ -66,9 +66,9 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9B7692692368D98E0075667C /* PassiveFaceLivenessSDK.framework in Embed Frameworks */,
-				9B7692642368D9850075667C /* DocumentReaderCore.framework in Embed Frameworks */,
-				9B7692602368D9850075667C /* DocumentReader.framework in Embed Frameworks */,
+				9B209D102373878700C5108C /* DocumentReaderCore.framework in Embed Frameworks */,
 				9B7692662368D9850075667C /* FaceLiveness.framework in Embed Frameworks */,
+				9B209D0D2373877C00C5108C /* DocumentReader.framework in Embed Frameworks */,
 				9B7692622368D9850075667C /* XLPagerTabStrip.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -77,10 +77,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B209D0B2373877C00C5108C /* DocumentReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReader.framework; path = frameworks/DocumentReader.framework; sourceTree = "<group>"; };
+		9B209D0E2373878700C5108C /* DocumentReaderCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReaderCore.framework; path = frameworks/DocumentReaderCore.framework; sourceTree = "<group>"; };
 		9B256F382354E09200565AFC /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
-		9B76925B2368D9850075667C /* DocumentReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReader.framework; path = frameworks/DocumentReader.framework; sourceTree = "<group>"; };
 		9B76925C2368D9850075667C /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = frameworks/XLPagerTabStrip.framework; sourceTree = "<group>"; };
-		9B76925D2368D9850075667C /* DocumentReaderCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReaderCore.framework; path = frameworks/DocumentReaderCore.framework; sourceTree = "<group>"; };
 		9B76925E2368D9850075667C /* FaceLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceLiveness.framework; path = frameworks/FaceLiveness.framework; sourceTree = "<group>"; };
 		9B7692672368D98E0075667C /* PassiveFaceLivenessSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PassiveFaceLivenessSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B9FD2C9235B7094004BA90D /* CommonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
@@ -131,9 +131,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B7692682368D98E0075667C /* PassiveFaceLivenessSDK.framework in Frameworks */,
-				9B7692632368D9850075667C /* DocumentReaderCore.framework in Frameworks */,
-				9B76925F2368D9850075667C /* DocumentReader.framework in Frameworks */,
+				9B209D0F2373878700C5108C /* DocumentReaderCore.framework in Frameworks */,
 				9B7692652368D9850075667C /* FaceLiveness.framework in Frameworks */,
+				9B209D0C2373877C00C5108C /* DocumentReader.framework in Frameworks */,
 				9B7692612368D9850075667C /* XLPagerTabStrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,9 +156,9 @@
 		CFEBF16321750D6A00646823 = {
 			isa = PBXGroup;
 			children = (
+				9B209D0E2373878700C5108C /* DocumentReaderCore.framework */,
+				9B209D0B2373877C00C5108C /* DocumentReader.framework */,
 				9B7692672368D98E0075667C /* PassiveFaceLivenessSDK.framework */,
-				9B76925B2368D9850075667C /* DocumentReader.framework */,
-				9B76925D2368D9850075667C /* DocumentReaderCore.framework */,
 				9B76925E2368D9850075667C /* FaceLiveness.framework */,
 				9B76925C2368D9850075667C /* XLPagerTabStrip.framework */,
 				CFEBF16E21750D6A00646823 /* PALIDIN */,
@@ -259,8 +259,8 @@
 				CFEBF16821750D6A00646823 /* Sources */,
 				CFEBF16921750D6A00646823 /* Frameworks */,
 				CFEBF16A21750D6A00646823 /* Resources */,
-				CF307BA52202410D000DB286 /* ShellScript */,
 				9B76924B2368D8510075667C /* Embed Frameworks */,
+				CF307BA52202410D000DB286 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -322,7 +322,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CF307BA52202410D000DB286 /* ShellScript */ = {
+		CF307BA52202410D000DB286 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,6 +331,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -505,7 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6Y57QV4NW5;
+				DEVELOPMENT_TEAM = V5PYKXLWNH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/frameworks/**",
@@ -536,7 +537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6Y57QV4NW5;
+				DEVELOPMENT_TEAM = V5PYKXLWNH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/frameworks/**",

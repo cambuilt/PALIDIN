@@ -37,7 +37,7 @@ class CommonUtils {
             
             // facial
             let biometricsInfo = BiometricsInfo()
-            var facialImage = FacialImage()
+          let facialImage = FacialImage()
             guard let facialImageBase64String = CommonUtils.convertBytesArrayToBase64String(bytesArray: faceBuffer) else {return nil}
             facialImage.image = facialImageBase64String
             biometricsInfo.facialImage = facialImage
