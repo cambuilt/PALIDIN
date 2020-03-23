@@ -19,13 +19,13 @@
 #define FACE_LIVENESS_ORIGINAL_FILENAME "aw_face_liveness.dll"
 #define FACE_LIVENESS_FILE_DESCRIPTION "Aware FaceLiveness Library"
 
-#define FACE_LIVENESS_AW_VERSION_INT 2050000
+#define FACE_LIVENESS_AW_VERSION_INT 2060000
 
-#define FACE_LIVENESS_AW_VERSION_STR "Aware FaceLiveness Library, version 2.5 r141484"
+#define FACE_LIVENESS_AW_VERSION_STR "Aware FaceLiveness Library, version 2.6"
 
-#define FACE_LIVENESS_AW_LEGAL_COPYRIGHT "Copyright (C) 2019 Aware, Inc."
+#define FACE_LIVENESS_AW_LEGAL_COPYRIGHT "Copyright (C) 2020 Aware, Inc."
 
-#define FACE_LIVENESS_AW_EXP_CODE      2814625056
+#define FACE_LIVENESS_AW_EXP_CODE      3603577440
 
 #define FACE_LIVENESS_AW_EXP_DATE      00000000
 #define FACE_LIVENESS_AW_EXP_TITLE     "Library Expired"

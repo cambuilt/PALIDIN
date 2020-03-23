@@ -1,13 +1,13 @@
 /*
- *  © 2017-2019 Aware, Inc.  All Rights Reserved.
- *
- *  NOTICE:  All information contained herein is, and remains the property of Aware, Inc.
- *  and its suppliers, if any.  The intellectual and technical concepts contained herein
- *  are proprietary to Aware, Inc. and its suppliers and may be covered by U.S. and
- *  Foreign Patents, patents in process, and are protected by trade secret or copyright law.
- *  Dissemination of this information or reproduction of this material is strictly forbidden
- *  unless prior written permission is obtained from Aware, Inc.
- */
+*  © 2017-2020 Aware, Inc.  All Rights Reserved.
+*
+*  NOTICE:  All information contained herein is, and remains the property of Aware, Inc.
+*  and its suppliers, if any.  The intellectual and technical concepts contained herein
+*  are proprietary to Aware, Inc. and its suppliers and may be covered by U.S. and
+*  Foreign Patents, patents in process, and are protected by trade secret or copyright law.
+*  Dissemination of this information or reproduction of this material is strictly forbidden
+*  unless prior written permission is obtained from Aware, Inc.
+*/
 
 import UIKit
 import XLPagerTabStrip
@@ -47,7 +47,7 @@ class ResultTextDataViewController: UIViewController, IndicatorInfoProvider,  UI
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return fieldTypes?.count ?? 0
+        return (fieldTypes?.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,13 +57,11 @@ class ResultTextDataViewController: UIViewController, IndicatorInfoProvider,  UI
         cell.fieldTypeNameLabel.text = fieldType.name!
         cell.barcodeLabel.text = fieldType.fieldResult?.barcode != nil ? fieldType.fieldResult?.barcode! : ""
         cell.ocrLabel.text = fieldType.fieldResult?.visual != nil ? fieldType.fieldResult?.visual! : ""
-        cell.isValidLabel.textColor = #colorLiteral(red: 0.137254902, green: 0.1215686275, blue: 0.1254901961, alpha: 1)
-        cell.fieldTypeNameLabel.textColor = #colorLiteral(red: 0.137254902, green: 0.1215686275, blue: 0.1254901961, alpha: 1)
         cell.barcodeOCRMatchingLabel.text = (fieldType.fieldResult?.visualBarcodeCompareValid == FieldComparisonResult.COMPARE_TRUE.rawValue) ? "✅" : (fieldType.fieldResult?.visualBarcodeCompareValid == FieldComparisonResult.COMPARE_FALSE.rawValue) ? "❌" : "❔"
-        cell.barcodeLabel.textColor = (fieldType.fieldResult?.isBarcodeStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : #colorLiteral(red: 0.137254902, green: 0.1215686275, blue: 0.1254901961, alpha: 1)
-        cell.ocrLabel.textColor = (fieldType.fieldResult?.isVisualStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : #colorLiteral(red: 0.137254902, green: 0.1215686275, blue: 0.1254901961, alpha: 1)
+        cell.barcodeLabel.textColor = (fieldType.fieldResult?.isBarcodeStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : UIColor.black
+        cell.ocrLabel.textColor = (fieldType.fieldResult?.isVisualStatusValid == FieldValidationResult.VALIDATE_FALSE.rawValue) ? UIColor.red : UIColor.black
         cell.isValidLabel.text = (fieldType.overallResult == AuthenticationResult.OK.rawValue) ? "✅" : (fieldType.overallResult == AuthenticationResult.FAILED.rawValue) ? "❌" : "❔"
-      
+        
         cell.indexPath = indexPath
         return cell
     }

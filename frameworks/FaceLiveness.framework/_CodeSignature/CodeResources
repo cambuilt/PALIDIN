@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/FaceLiveness-Swift.h</key>
 		<data>
-		05lsFWkCpqk5oG1d7jIiWYt/CTk=
+		ls/I3A/OTJ/0oyVXgoUuM9s4LnA=
 		</data>
 		<key>Headers/FaceLiveness.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/aw_face_liveness_version.h</key>
 		<data>
-		B4o6RcgWZfi8TnRZ/X+jNe1Hb2M=
+		epejkkL3R7xJVjIZuVY7cuD5o78=
 		</data>
 		<key>Headers/aw_preface.h</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Headers/aw_preface_version.h</key>
 		<data>
-		z4mBGOzBA4CAKUSNGY7/yxtaW2g=
+		OE6O6pcBQoP69ZVHn3ZiiICije8=
 		</data>
 		<key>Headers/aw_scoring.h</key>
 		<data>
-		+W4xXBb6r5vLSDH+u825B96t1II=
+		+AS3J/09EmGXz/APC/7bMi1dDwQ=
 		</data>
 		<key>Headers/aw_scoring_errors.h</key>
 		<data>
-		XdWfo1kMEmV3O1WWA1rsM/VvDmY=
+		CH0Fsi9rSMbUauCNqnU2Oz9+DnM=
 		</data>
 		<key>Headers/aw_scoring_version.h</key>
 		<data>
-		/xT9R7wNS8PRZX33YinrtXIYXtY=
+		fRHOzVGqrAa4NsI7mJzHBwabZPA=
 		</data>
 		<key>Headers/aw_types.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/aw_video_ex.h</key>
 		<data>
-		fuhuQEEziYjqpcmpm7mplW3dtw8=
+		raGJ6f0Nv1aSx55nhkdkQXJ/KXE=
 		</data>
 		<key>Headers/aw_video_ex_errors.h</key>
 		<data>
@@ -54,19 +54,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		wAxKs7G8+WfLryw8slxmFIj2vW8=
+		5fDhergvpr6h4SaogfAr/YUwbc4=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		4hMqEuilQTueNCk1XU0oHZBJRa0=
+		BCOTrNCzAfAK956AoPkaZV+VkQM=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		lwXI483oUX5RDxT3qfRs1mdfQHM=
+		hgNmpnLd8kMZl2r1k1mvK3y0Bus=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		XUctpUtDsdipMbfgZIP6RMsuAs4=
+		</data>
+		<key>compiler.txt</key>
+		<data>
+		yGeTFZBRBKDGcIIiR2GzHYgc4GE=
 		</data>
 		<key>knomi_alfa_client.xml</key>
 		<data>
@@ -134,11 +138,11 @@
 		</data>
 		<key>knomi_itau_alfa_client.xml</key>
 		<data>
-		m/ASfO3rvbAalfT2EMbGu1bl76o=
+		DSiHid5R9fxT5MQQ6n58cU+GxEU=
 		</data>
 		<key>knomi_itau_alfa_server.xml</key>
 		<data>
-		qmCqFUVCP5RT2P3R50bv9K83dU4=
+		pjSNu/bUs7QBV4ekYcmqFIU64A4=
 		</data>
 		<key>knomi_lloyd_bank_client.xml</key>
 		<data>
@@ -148,9 +152,17 @@
 		<data>
 		xIQLUlqyWlO0aVX84seRp1HxN/0=
 		</data>
+		<key>revision.txt</key>
+		<data>
+		TpZ8oBgxpN59gSm4mJU/H0fedEg=
+		</data>
+		<key>version.txt</key>
+		<data>
+		6cznhvTO+D1c5OGIasH88XuEvSs=
+		</data>
 		<key>workflows.json</key>
 		<data>
-		8BUZBwrgbTS4aKeSc42Ka6NK61w=
+		gdQXADIiitk6GZjGaKoOQhaDj2Y=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -159,11 +171,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			05lsFWkCpqk5oG1d7jIiWYt/CTk=
+			ls/I3A/OTJ/0oyVXgoUuM9s4LnA=
 			</data>
 			<key>hash2</key>
 			<data>
-			8y7+94GtJJ+x8+8QGDaZ9Yj/CcUx9PiFh8KhNhkOR38=
+			6N7ADf0+pMs/s0T1IV6bvgt14KN5gCysT0iydZPFe84=
 			</data>
 		</dict>
 		<key>Headers/FaceLiveness.h</key>
@@ -181,11 +193,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			B4o6RcgWZfi8TnRZ/X+jNe1Hb2M=
+			epejkkL3R7xJVjIZuVY7cuD5o78=
 			</data>
 			<key>hash2</key>
 			<data>
-			91L3UkAkkgGepGb5diLVLUIIIkTNGaCn0xvDNLF682g=
+			GgrO7OjXGXQk70633yVEx7oA8D6WRUgOsAAVBc9wEVA=
 			</data>
 		</dict>
 		<key>Headers/aw_preface.h</key>
@@ -214,44 +226,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			z4mBGOzBA4CAKUSNGY7/yxtaW2g=
+			OE6O6pcBQoP69ZVHn3ZiiICije8=
 			</data>
 			<key>hash2</key>
 			<data>
-			q3uZTkdHT6TLuISLsgiuiGDPMRUezfP0yFcGsTA2QsM=
+			3CTDYf4EfMDEoPazi9Gj5LS9IHd9hqoL0AxLyLZ2d0M=
 			</data>
 		</dict>
 		<key>Headers/aw_scoring.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+W4xXBb6r5vLSDH+u825B96t1II=
+			+AS3J/09EmGXz/APC/7bMi1dDwQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			r2WYFy7r4gVsUKs2CocTG8wwHUN6/HTTf9xPdMyH2mI=
+			zNfdJsr3FN7XF0Kmw8mlJfibaM4q5pweWB0CbkIEE1g=
 			</data>
 		</dict>
 		<key>Headers/aw_scoring_errors.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XdWfo1kMEmV3O1WWA1rsM/VvDmY=
+			CH0Fsi9rSMbUauCNqnU2Oz9+DnM=
 			</data>
 			<key>hash2</key>
 			<data>
-			yFoThA3P+365BZULhV26XOa/658yqWOtNEOHPc9lCm8=
+			VSVxLCLuC9erxcLAUbiNmKLjK3RVVT99Jgkpwmmvljg=
 			</data>
 		</dict>
 		<key>Headers/aw_scoring_version.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/xT9R7wNS8PRZX33YinrtXIYXtY=
+			fRHOzVGqrAa4NsI7mJzHBwabZPA=
 			</data>
 			<key>hash2</key>
 			<data>
-			YnbqZi9WMq2CLGsycaxJe0VV9ubiV4RUksqrRCEjac4=
+			uDwktYkGiYH2MFCNdBtewY3CuPzSmCB6zE7rPhbw63k=
 			</data>
 		</dict>
 		<key>Headers/aw_types.h</key>
@@ -269,11 +281,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fuhuQEEziYjqpcmpm7mplW3dtw8=
+			raGJ6f0Nv1aSx55nhkdkQXJ/KXE=
 			</data>
 			<key>hash2</key>
 			<data>
-			UPTjG9Ar8y0lNw7tj8Lox9LOkcbCeAuXTu+BETNre/g=
+			YVIsZ0lWgV3l71g9DOzLn+S0HdFLCB0K9HROQ+8D7As=
 			</data>
 		</dict>
 		<key>Headers/aw_video_ex_errors.h</key>
@@ -291,22 +303,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4hMqEuilQTueNCk1XU0oHZBJRa0=
+			BCOTrNCzAfAK956AoPkaZV+VkQM=
 			</data>
 			<key>hash2</key>
 			<data>
-			KA34eY5uxujj6SHcZR0rIeQs0X01D7+NXxnbJHScSaM=
+			Pt9fe6nyH3pZ8mhNT+MpFBsWCMp/hb9jxjEGDFW+j2s=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lwXI483oUX5RDxT3qfRs1mdfQHM=
+			hgNmpnLd8kMZl2r1k1mvK3y0Bus=
 			</data>
 			<key>hash2</key>
 			<data>
-			Gn5vaGMBMV/rggNAS+zegFIZAQEmL6H1CucMKQeELZg=
+			M/ILcJDdMsvtpPnnCJdfcA3/2ZPUMYsNJ526aoJI5U0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -318,6 +330,17 @@
 			<key>hash2</key>
 			<data>
 			1HYCAcC61maAZEADC0z/hLyTt3oaQCu1J3HalM4O93U=
+			</data>
+		</dict>
+		<key>compiler.txt</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yGeTFZBRBKDGcIIiR2GzHYgc4GE=
+			</data>
+			<key>hash2</key>
+			<data>
+			GoGgCbalaVnidly9FGPKFs/poHwcRbj/8T38Tmhla3g=
 			</data>
 		</dict>
 		<key>knomi_alfa_client.xml</key>
@@ -500,22 +523,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			m/ASfO3rvbAalfT2EMbGu1bl76o=
+			DSiHid5R9fxT5MQQ6n58cU+GxEU=
 			</data>
 			<key>hash2</key>
 			<data>
-			UNbAw49UC4YH0DpEXX3Rw5kl+OFITY4FVspj26Mioxs=
+			JqYsukz9MW4P3NaEwdKmksBiOiDt7+11Lzk8hFMvrsE=
 			</data>
 		</dict>
 		<key>knomi_itau_alfa_server.xml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qmCqFUVCP5RT2P3R50bv9K83dU4=
+			pjSNu/bUs7QBV4ekYcmqFIU64A4=
 			</data>
 			<key>hash2</key>
 			<data>
-			xM2az2fmTSjrs3kY42LjmfHbUau72P5GDzjmzSMd1R0=
+			QbwHQ49KOV6ZCy8rg8cN7MUg+w4JkIInyD9nQi7vC8g=
 			</data>
 		</dict>
 		<key>knomi_lloyd_bank_client.xml</key>
@@ -540,15 +563,37 @@
 			LmaXQUjt5c21AxUg9b8179F/moOv2gVsFToQshU7TE4=
 			</data>
 		</dict>
+		<key>revision.txt</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TpZ8oBgxpN59gSm4mJU/H0fedEg=
+			</data>
+			<key>hash2</key>
+			<data>
+			ftaeShmRDukmcr/t8B/QAF/4FvgV3IZhnTCJDJuv/JM=
+			</data>
+		</dict>
+		<key>version.txt</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6cznhvTO+D1c5OGIasH88XuEvSs=
+			</data>
+			<key>hash2</key>
+			<data>
+			i28qgYmFGI9Vo+TibiOcaaIbcOEwa1Ix5laU6kpUcSg=
+			</data>
+		</dict>
 		<key>workflows.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8BUZBwrgbTS4aKeSc42Ka6NK61w=
+			gdQXADIiitk6GZjGaKoOQhaDj2Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			0QzoZOg2n2EVQX+6AQggxDT0m2DGU7cgvn9Uaf3sAX4=
+			sDlH5tBn+dm0fsydyVMC7WFfUGewawuTvLI0UKu3O+Y=
 			</data>
 		</dict>
 	</dict>

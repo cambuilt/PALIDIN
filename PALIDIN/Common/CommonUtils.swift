@@ -1,13 +1,13 @@
 /*
- *  © 2017-2019 Aware, Inc.  All Rights Reserved.
- *
- *  NOTICE:  All information contained herein is, and remains the property of Aware, Inc.
- *  and its suppliers, if any.  The intellectual and technical concepts contained herein
- *  are proprietary to Aware, Inc. and its suppliers and may be covered by U.S. and
- *  Foreign Patents, patents in process, and are protected by trade secret or copyright law.
- *  Dissemination of this information or reproduction of this material is strictly forbidden
- *  unless prior written permission is obtained from Aware, Inc.
- */
+*  © 2017-2020 Aware, Inc.  All Rights Reserved.
+*
+*  NOTICE:  All information contained herein is, and remains the property of Aware, Inc.
+*  and its suppliers, if any.  The intellectual and technical concepts contained herein
+*  are proprietary to Aware, Inc. and its suppliers and may be covered by U.S. and
+*  Foreign Patents, patents in process, and are protected by trade secret or copyright law.
+*  Dissemination of this information or reproduction of this material is strictly forbidden
+*  unless prior written permission is obtained from Aware, Inc.
+*/
 
 import Foundation
 import UIKit
@@ -20,13 +20,13 @@ class CommonUtils {
             let documentBuffer = docProofMsg.documentBuffer,
             documentBuffer.count > 0 {
             
-            let documentAuthenticationRequest = DocumentAuthenticationRequest()
+            var documentAuthenticationRequest = DocumentAuthenticationRequest()
             
             // documents
-            let documentsInfo = DocumentsInfo()
+            var documentsInfo = DocumentsInfo()
             var documentImage = [DocumentImage]()
             for docBuffer in documentBuffer {
-                let docImage = DocumentImage()
+                var docImage = DocumentImage()
                 docImage.format = ".jpg"
                 docImage.lightingScheme = 6
                 guard let docImageBase64String = CommonUtils.convertBytesArrayToBase64String(bytesArray: docBuffer) else {return nil}
@@ -37,7 +37,7 @@ class CommonUtils {
             
             // facial
             let biometricsInfo = BiometricsInfo()
-          let facialImage = FacialImage()
+            var facialImage = FacialImage()
             guard let facialImageBase64String = CommonUtils.convertBytesArrayToBase64String(bytesArray: faceBuffer) else {return nil}
             facialImage.image = facialImageBase64String
             biometricsInfo.facialImage = facialImage

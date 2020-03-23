@@ -158,6 +158,8 @@ class DocReaderViewController: UIViewController {
         print("Scaning not finished. Result: \(result)")
       case .morePagesAvailable:
         print("morePagesAvailable")
+      default:
+        print("unknown")
       }
     }
   }

@@ -1,6 +1,6 @@
 /**********************************************************************
  *
- * Copyright (C) 2019 Aware, Inc.
+ * Copyright (C) 2020 Aware, Inc.
  *
  * $Workfile:  $    $Revision:  $
  * Last Modified: $Date: $ by: $Author:  $

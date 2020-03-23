@@ -3,8 +3,10 @@
     <face_characteristics>
 		<!-- Disallow faces that are egregiously lit -->
         <facial_dynamic_range min="7.0" max="8.0" />
-		<!-- Don't allow smiles	-->
-		<smile_likelihood min="0" pref="0" max="45" />
+        <!-- Disallow maximum level facial brightness -->
+		<percent_facial_brightness max="99.9"/>
+        <!-- Disallow maximum level brightness scores -->
+        <brightness_score max="99.9"/>
     </face_characteristics>
     <eye_characteristics>
 		<!-- Eyes must not be covered -->

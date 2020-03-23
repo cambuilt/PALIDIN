@@ -678,34 +678,13 @@ typedef enum aw_video_autocapture_feedback_t aw_video_autocapture_feedback_t;
 enum aw_video_algorithm_t
 {
     /*  */
-    AW_VIDEO_ALGORITHM_B1=0,
-
-    /*  */
     AW_VIDEO_ALGORITHM_B2=1,
-
-    /*  */
-    AW_VIDEO_ALGORITHM_D1=2,
-
-    /*  */
-    AW_VIDEO_ALGORITHM_M1=3,
 
     /*  */
     AW_VIDEO_ALGORITHM_D2=4,
 
     /*  */
-    AW_VIDEO_ALGORITHM_I1=5,
-
-    /*  */
     AW_VIDEO_ALGORITHM_B3=6,
-
-    /*  */
-    AW_VIDEO_ALGORITHM_I2=7,
-
-    /*  */
-    AW_VIDEO_ALGORITHM_C1A=8,
-
-    /*  */
-    AW_VIDEO_ALGORITHM_C1I=9,
 
     /*  */
     AW_VIDEO_ALGORITHM_E1=10,
@@ -735,7 +714,31 @@ enum aw_video_algorithm_t
     AW_VIDEO_ALGORITHM_E9=118,
 
     /*  */
-    AW_VIDEO_ALGORITHM_G1=11,
+    AW_VIDEO_ALGORITHM_E1_W=119,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_E2_W=120,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_E3_W=121,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_E4_W=122,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_E5_W=123,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_E6_W=124,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_E7_W=125,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_E8_W=126,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_E9_W=127,
 
     /*  */
     AW_VIDEO_ALGORITHM_N1=12,
@@ -795,6 +798,9 @@ enum aw_video_algorithm_t
     AW_VIDEO_ALGORITHM_N1_J=30,
 
     /*  */
+    AW_VIDEO_ALGORITHM_N1_W=128,
+
+    /*  */
     AW_VIDEO_ALGORITHM_N2_A=31,
 
     /*  */
@@ -823,6 +829,9 @@ enum aw_video_algorithm_t
 
     /*  */
     AW_VIDEO_ALGORITHM_N2_J=40,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_N2_W=129,
 
     /*  */
     AW_VIDEO_ALGORITHM_N3_A=41,
@@ -855,6 +864,9 @@ enum aw_video_algorithm_t
     AW_VIDEO_ALGORITHM_N3_J=50,
 
     /*  */
+    AW_VIDEO_ALGORITHM_N3_W=130,
+
+    /*  */
     AW_VIDEO_ALGORITHM_N4_A=51,
 
     /*  */
@@ -883,6 +895,9 @@ enum aw_video_algorithm_t
 
     /*  */
     AW_VIDEO_ALGORITHM_N4_J=60,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_N4_W=131,
 
     /*  */
     AW_VIDEO_ALGORITHM_N5_A=61,
@@ -915,6 +930,9 @@ enum aw_video_algorithm_t
     AW_VIDEO_ALGORITHM_N5_J=70,
 
     /*  */
+    AW_VIDEO_ALGORITHM_N5_W=132,
+
+    /*  */
     AW_VIDEO_ALGORITHM_N6_A=71,
 
     /*  */
@@ -943,6 +961,9 @@ enum aw_video_algorithm_t
 
     /*  */
     AW_VIDEO_ALGORITHM_N6_J=80,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_N6_W=133,
 
     /*  */
     AW_VIDEO_ALGORITHM_N7_A=81,
@@ -975,6 +996,9 @@ enum aw_video_algorithm_t
     AW_VIDEO_ALGORITHM_N7_J=90,
 
     /*  */
+    AW_VIDEO_ALGORITHM_N7_W=134,
+
+    /*  */
     AW_VIDEO_ALGORITHM_N8_A=91,
 
     /*  */
@@ -1005,6 +1029,9 @@ enum aw_video_algorithm_t
     AW_VIDEO_ALGORITHM_N8_J=100,
 
     /*  */
+    AW_VIDEO_ALGORITHM_N8_W=135,
+
+    /*  */
     AW_VIDEO_ALGORITHM_N9_A=101,
 
     /*  */
@@ -1032,7 +1059,10 @@ enum aw_video_algorithm_t
     AW_VIDEO_ALGORITHM_N9_I=109,
 
     /*  */
-    AW_VIDEO_ALGORITHM_N9_J=110
+    AW_VIDEO_ALGORITHM_N9_J=110,
+
+    /*  */
+    AW_VIDEO_ALGORITHM_N9_W=136
 };
 typedef enum aw_video_algorithm_t aw_video_algorithm_t;
 
@@ -1051,7 +1081,11 @@ enum aw_video_scoring_mode_t
     AW_VIDEO_SCORING_MODE_CUMULATIVE=2,
 
     /* Algorithms will return their raw scores. */
-    AW_VIDEO_SCORING_MODE_RAW=3
+    AW_VIDEO_SCORING_MODE_RAW=3,
+
+    /* Algorithms will return a score based on all previous frames. (Patch
+       not applied) */
+    AW_VIDEO_SCORING_MODE_CUMULATIVE_NO_PATCH=4
 };
 typedef enum aw_video_scoring_mode_t aw_video_scoring_mode_t;
 

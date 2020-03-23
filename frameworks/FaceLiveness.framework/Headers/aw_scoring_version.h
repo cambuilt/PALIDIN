@@ -19,11 +19,11 @@
 #define SCORING_ORIGINAL_FILENAME "aw_scoring.dll"
 #define SCORING_FILE_DESCRIPTION "Aware Scoring Library"
 
-#define SCORING_AW_VERSION_INT 1030102
+#define SCORING_AW_VERSION_INT 1030106
 
-#define SCORING_AW_VERSION_STR "Aware Scoring Library, version 1.3.1.2 r141210"
+#define SCORING_AW_VERSION_STR "Aware Scoring Library, version 1.3.1.6"
 
-#define SCORING_AW_LEGAL_COPYRIGHT "Copyright (C) 2019 Aware, Inc."
+#define SCORING_AW_LEGAL_COPYRIGHT "Copyright (C) 2020 Aware, Inc."
 
 #define SCORING_AW_EXP_CODE      148657923
 

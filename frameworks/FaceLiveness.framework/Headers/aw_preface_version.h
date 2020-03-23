@@ -19,13 +19,13 @@
 #define PREFACE_ORIGINAL_FILENAME "aw_preface.dll"
 #define PREFACE_FILE_DESCRIPTION "Aware Preface Library"
 
-#define PREFACE_AW_VERSION_INT 6070307
+#define PREFACE_AW_VERSION_INT 6070500
 
-#define PREFACE_AW_VERSION_STR "Aware Preface Library, version 6.7.3.7 r141226"
+#define PREFACE_AW_VERSION_STR "Aware Preface Library, version 6.7.5"
 
 #define PREFACE_AW_LEGAL_COPYRIGHT "Copyright (C) 2019 Aware, Inc."
 
-#define PREFACE_AW_EXP_CODE      81222340
+#define PREFACE_AW_EXP_CODE      1900887652
 
 #define PREFACE_AW_EXP_DATE      00000000
 #define PREFACE_AW_EXP_TITLE     "Library Expired"

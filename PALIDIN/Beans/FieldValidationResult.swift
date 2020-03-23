@@ -1,5 +1,5 @@
 /*
- *  © 2017-2019 Aware, Inc.  All Rights Reserved.
+ *  © 2017-2020 Aware, Inc.  All Rights Reserved.
  *
  *  NOTICE:  All information contained herein is, and remains the property of Aware, Inc.
  *  and its suppliers, if any.  The intellectual and technical concepts contained herein

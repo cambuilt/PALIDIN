@@ -18,6 +18,8 @@
 		9B7692662368D9850075667C /* FaceLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925E2368D9850075667C /* FaceLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B7692682368D98E0075667C /* PassiveFaceLivenessSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7692672368D98E0075667C /* PassiveFaceLivenessSDK.framework */; };
 		9B7692692368D98E0075667C /* PassiveFaceLivenessSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7692672368D98E0075667C /* PassiveFaceLivenessSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B79FBDA2426711C00F749A0 /* AwDocumentCapture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B79FBD92426711C00F749A0 /* AwDocumentCapture.framework */; };
+		9B79FBDB2426711C00F749A0 /* AwDocumentCapture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B79FBD92426711C00F749A0 /* AwDocumentCapture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B9FD2CA235B7094004BA90D /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2C9235B7094004BA90D /* CommonUtils.swift */; };
 		9B9FD2CC235B70AF004BA90D /* AuthenticationConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2CB235B70AF004BA90D /* AuthenticationConnectionHandler.swift */; };
 		9B9FD2CE235B70C1004BA90D /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FD2CD235B70C1004BA90D /* CommonConstants.swift */; };
@@ -65,6 +67,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9B79FBDB2426711C00F749A0 /* AwDocumentCapture.framework in Embed Frameworks */,
 				9B7692692368D98E0075667C /* PassiveFaceLivenessSDK.framework in Embed Frameworks */,
 				9B209D102373878700C5108C /* DocumentReaderCore.framework in Embed Frameworks */,
 				9B7692662368D9850075667C /* FaceLiveness.framework in Embed Frameworks */,
@@ -83,6 +86,7 @@
 		9B76925C2368D9850075667C /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = frameworks/XLPagerTabStrip.framework; sourceTree = "<group>"; };
 		9B76925E2368D9850075667C /* FaceLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceLiveness.framework; path = frameworks/FaceLiveness.framework; sourceTree = "<group>"; };
 		9B7692672368D98E0075667C /* PassiveFaceLivenessSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PassiveFaceLivenessSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B79FBD92426711C00F749A0 /* AwDocumentCapture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AwDocumentCapture.framework; path = frameworks/AwDocumentCapture.framework; sourceTree = "<group>"; };
 		9B9FD2C9235B7094004BA90D /* CommonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		9B9FD2CB235B70AF004BA90D /* AuthenticationConnectionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationConnectionHandler.swift; sourceTree = "<group>"; };
 		9B9FD2CD235B70C1004BA90D /* CommonConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B79FBDA2426711C00F749A0 /* AwDocumentCapture.framework in Frameworks */,
 				9B7692682368D98E0075667C /* PassiveFaceLivenessSDK.framework in Frameworks */,
 				9B209D0F2373878700C5108C /* DocumentReaderCore.framework in Frameworks */,
 				9B7692652368D9850075667C /* FaceLiveness.framework in Frameworks */,
@@ -141,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B79FBD82426711C00F749A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B79FBD92426711C00F749A0 /* AwDocumentCapture.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF307B5C21F2526D000DB286 /* Result */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +176,7 @@
 				9B76925C2368D9850075667C /* XLPagerTabStrip.framework */,
 				CFEBF16E21750D6A00646823 /* PALIDIN */,
 				CFEBF16D21750D6A00646823 /* Products */,
+				9B79FBD82426711C00F749A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -506,6 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.8;
 				DEVELOPMENT_TEAM = V5PYKXLWNH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -526,7 +541,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.palidin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = arm64;
 			};
@@ -537,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.8;
 				DEVELOPMENT_TEAM = V5PYKXLWNH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -553,7 +569,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.palidin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = arm64;
 			};
