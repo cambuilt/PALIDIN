@@ -44,17 +44,23 @@ public class DocReaderDispatchViewController: UIViewController {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.landscapeRight, andRotateTo: UIInterfaceOrientation.landscapeRight)
         let scannerViewController = UIStoryboard(name: "AwDocumentCapture", bundle: Bundle.init(identifier: "com.aware.auth.AwDocumentCapture")).instantiateViewController(withIdentifier: "ImageScannerViewController") as! ImageScannerViewController
         
-        /* OPTIONAL */
-        scannerViewController.setCornerImageScale(scale: 0.8)
-        scannerViewController.setFlipImageScale(scale: 0.5)
-        scannerViewController.enableCaptureResultView(enable: true)
-        scannerViewController.setDisplayHelpContent(content: "Place Document Here")
-        
+        /* OPTIONAL SETTINGS */
+        scannerViewController.setSurroundingColor(color: UIColor.darkGray, alpha: CGFloat(0.7))
         /*
-        scannerViewController.setCornerImageWhileDetecting(image: <#T##UIImage#>)
         scannerViewController.setCornerImageOnDetection(image: <#T##UIImage#>)
+        scannerViewController.setCornerImageWhileDetecting(image: <#T##UIImage#>)
         scannerViewController.setFlipImage(image: <#T##UIImage#>)
-                
+        scannerViewController.setFlipImageScale(scale: <#T##Double#>)
+        
+        scannerViewController.enableDisplayCaptureCompletion(enable: <#T##Bool#>)
+        scannerViewController.setDisplayHelpContent(content: <#T##String#>)
+        scannerViewController.setDisplayHelpFrontImage(instructionDocumentFrontImage: <#T##UIImage#>)
+        scannerViewController.setDisplayHelpBackImage(instructionDocumentBackImage: <#T##UIImage#>)
+        scannerViewController.enableDisplayCaptureCompletion(enable: <#T##Bool#>)
+        scannerViewController.setDisplayCaptureCompletionContent(content: <#T##String#>)
+        scannerViewController.setDisplayCaptureCompletionImage(completionImage: <#T##UIImage#>)
+        scannerViewController.enableCaptureResultView(enable: <#T##Bool#>)
+
         // Set only if you want to use BioSP server to validate document type during capture. If not set, a local faster validator will be used
         scannerViewController.setDocumentTypeValidationType(useBioSP: true, docValidationURL: CommonConstants.DOC_TYPE_VALIDATION_URL, username: CommonConstants.serviceUsername, password: CommonConstants.servicePassword)
         */
@@ -87,6 +93,7 @@ public class DocReaderDispatchViewController: UIViewController {
         self.present(alertController!, animated: true) {
             let faceLivenessCaptureViewController = self.storyboard?.instantiateViewController(withIdentifier: "PassiveFaceLivenessManagerViewController") as! PassiveFaceLivenessManagerViewController
             faceLivenessCaptureViewController.modalPresentationStyle = .fullScreen
+            faceLivenessCaptureViewController.shouldSkipDisplayIfLivenessSucceed = false
             self.isCaptureJustStarted = false
             faceLivenessCaptureViewController.setCallback(callback: { [unowned self] (error, faceBuffer) in
                 if !error, let capturedImage = faceBuffer {

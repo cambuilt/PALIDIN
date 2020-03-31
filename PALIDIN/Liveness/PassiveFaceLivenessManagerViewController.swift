@@ -21,6 +21,7 @@ public class PassiveFaceLivenessManagerViewController: UIViewController, ServerR
     var appSettings: AppSettingsModel?
     // determine if start capture viewcontroller in viewDidAppear
     var hasCaptureProcessStarted = false
+    public var shouldSkipDisplayIfLivenessSucceed = true
 
     // handle callbacks
     public typealias GotFaceCaptureCallback = (
@@ -173,12 +174,9 @@ public class PassiveFaceLivenessManagerViewController: UIViewController, ServerR
     }
 
     public func runAppUIClientServerLivenessComponent() -> Void {
-        
-        print("runAppUIClientServerLivenessComponent - BEGIN")
-        
         DispatchQueue.main.async {
-            
-            
+            print("runAppUIClientServerLivenessComponent - BEGIN")
+
             PassiveFaceLivenessManagerViewController.livenessAppUIClientServerViewController?.restDelegate = self
             PassiveFaceLivenessManagerViewController.livenessAppUIClientServerViewController?.captureTimeout = (self.appSettings?.captureTimeout)!
             PassiveFaceLivenessManagerViewController.livenessAppUIClientServerViewController?.username = (self.appSettings?.username)!
@@ -188,9 +186,10 @@ public class PassiveFaceLivenessManagerViewController: UIViewController, ServerR
             print("[HomeVC | runAppUICSLC] serverEndpoint: \(String(describing: PassiveFaceLivenessManagerViewController.livenessAppUIClientServerViewController?.serverEndpoint))")
             PassiveFaceLivenessManagerViewController.livenessAppUIClientServerViewController!.modalPresentationStyle = .fullScreen
             self.present(PassiveFaceLivenessManagerViewController.livenessAppUIClientServerViewController!, animated: true, completion: nil)
-        }
         
-        print("runAppUIClientServerLivenessComponent - END")
+            print("runAppUIClientServerLivenessComponent - END")
+        }
+            
     }
 
     private func showResultAlert(
@@ -261,8 +260,15 @@ public class PassiveFaceLivenessManagerViewController: UIViewController, ServerR
             }
             alertController.addAction(okAction)
         }
-        
-        self.present(alertController, animated: true, completion: nil)
+        if shouldSkipDisplayIfLivenessSucceed && !error {
+            self.dismiss(animated: true, completion: {
+                self.mFaceCaptureCallback?(false, [UInt8](imageData!))
+            })
+        }
+        else {
+            self.present(alertController, animated: true, completion: nil)
+        }
+//        self.present(alertController, animated: true, completion: nil)
     }
     
 }
