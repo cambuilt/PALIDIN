@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B209D0C2373877C00C5108C /* DocumentReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B209D0B2373877C00C5108C /* DocumentReader.framework */; };
-		9B209D0D2373877C00C5108C /* DocumentReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B209D0B2373877C00C5108C /* DocumentReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9B209D0F2373878700C5108C /* DocumentReaderCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B209D0E2373878700C5108C /* DocumentReaderCore.framework */; };
-		9B209D102373878700C5108C /* DocumentReaderCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B209D0E2373878700C5108C /* DocumentReaderCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B256F392354E09200565AFC /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B256F382354E09200565AFC /* Launch.storyboard */; };
 		9B7692612368D9850075667C /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925C2368D9850075667C /* XLPagerTabStrip.framework */; };
 		9B7692622368D9850075667C /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76925C2368D9850075667C /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -44,6 +40,10 @@
 		9BDD87082369E38300AE3903 /* CountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD87072369E38300AE3903 /* CountDownViewController.swift */; };
 		9BDD870A2369FD2700AE3903 /* DocConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD87092369FD2700AE3903 /* DocConfirmViewController.swift */; };
 		9BE456E62368ABD4004093A7 /* screenLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE456E52368ABD3004093A7 /* screenLogo.png */; };
+		9BF1F796244A7FA000FD5980 /* DocumentReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF1F795244A7FA000FD5980 /* DocumentReader.framework */; };
+		9BF1F797244A7FA000FD5980 /* DocumentReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF1F795244A7FA000FD5980 /* DocumentReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9BF1F799244A7FAC00FD5980 /* DocumentReaderCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF1F798244A7FAC00FD5980 /* DocumentReaderCore.framework */; };
+		9BF1F79A244A7FAC00FD5980 /* DocumentReaderCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF1F798244A7FAC00FD5980 /* DocumentReaderCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF307AB221ED385B000DB286 /* regula.license in Resources */ = {isa = PBXBuildFile; fileRef = CF307AB121ED385B000DB286 /* regula.license */; };
 		CF307AC421EFD4BD000DB286 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF307AC321EFD4BD000DB286 /* ResultViewController.swift */; };
 		CF307AE121EFFFAF000DB286 /* ResultSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF307AE021EFFFAF000DB286 /* ResultSummaryViewController.swift */; };
@@ -68,10 +68,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9B79FBDB2426711C00F749A0 /* AwDocumentCapture.framework in Embed Frameworks */,
+				9BF1F797244A7FA000FD5980 /* DocumentReader.framework in Embed Frameworks */,
 				9B7692692368D98E0075667C /* PassiveFaceLivenessSDK.framework in Embed Frameworks */,
-				9B209D102373878700C5108C /* DocumentReaderCore.framework in Embed Frameworks */,
+				9BF1F79A244A7FAC00FD5980 /* DocumentReaderCore.framework in Embed Frameworks */,
 				9B7692662368D9850075667C /* FaceLiveness.framework in Embed Frameworks */,
-				9B209D0D2373877C00C5108C /* DocumentReader.framework in Embed Frameworks */,
 				9B7692622368D9850075667C /* XLPagerTabStrip.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -80,8 +80,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9B209D0B2373877C00C5108C /* DocumentReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReader.framework; path = frameworks/DocumentReader.framework; sourceTree = "<group>"; };
-		9B209D0E2373878700C5108C /* DocumentReaderCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReaderCore.framework; path = frameworks/DocumentReaderCore.framework; sourceTree = "<group>"; };
 		9B256F382354E09200565AFC /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		9B76925C2368D9850075667C /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = frameworks/XLPagerTabStrip.framework; sourceTree = "<group>"; };
 		9B76925E2368D9850075667C /* FaceLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceLiveness.framework; path = frameworks/FaceLiveness.framework; sourceTree = "<group>"; };
@@ -111,6 +109,8 @@
 		9BDD87072369E38300AE3903 /* CountDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownViewController.swift; sourceTree = "<group>"; };
 		9BDD87092369FD2700AE3903 /* DocConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocConfirmViewController.swift; sourceTree = "<group>"; };
 		9BE456E52368ABD3004093A7 /* screenLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenLogo.png; sourceTree = "<group>"; };
+		9BF1F795244A7FA000FD5980 /* DocumentReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReader.framework; path = frameworks/DocumentReader.framework; sourceTree = "<group>"; };
+		9BF1F798244A7FAC00FD5980 /* DocumentReaderCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentReaderCore.framework; path = frameworks/DocumentReaderCore.framework; sourceTree = "<group>"; };
 		CF307AB121ED385B000DB286 /* regula.license */ = {isa = PBXFileReference; lastKnownFileType = file; path = regula.license; sourceTree = "<group>"; };
 		CF307AC321EFD4BD000DB286 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CF307AE021EFFFAF000DB286 /* ResultSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSummaryViewController.swift; sourceTree = "<group>"; };
@@ -135,10 +135,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B79FBDA2426711C00F749A0 /* AwDocumentCapture.framework in Frameworks */,
+				9BF1F796244A7FA000FD5980 /* DocumentReader.framework in Frameworks */,
 				9B7692682368D98E0075667C /* PassiveFaceLivenessSDK.framework in Frameworks */,
-				9B209D0F2373878700C5108C /* DocumentReaderCore.framework in Frameworks */,
+				9BF1F799244A7FAC00FD5980 /* DocumentReaderCore.framework in Frameworks */,
 				9B7692652368D9850075667C /* FaceLiveness.framework in Frameworks */,
-				9B209D0C2373877C00C5108C /* DocumentReader.framework in Frameworks */,
 				9B7692612368D9850075667C /* XLPagerTabStrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +149,8 @@
 		9B79FBD82426711C00F749A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9BF1F798244A7FAC00FD5980 /* DocumentReaderCore.framework */,
+				9BF1F795244A7FA000FD5980 /* DocumentReader.framework */,
 				9B79FBD92426711C00F749A0 /* AwDocumentCapture.framework */,
 			);
 			name = Frameworks;
@@ -169,8 +171,6 @@
 		CFEBF16321750D6A00646823 = {
 			isa = PBXGroup;
 			children = (
-				9B209D0E2373878700C5108C /* DocumentReaderCore.framework */,
-				9B209D0B2373877C00C5108C /* DocumentReader.framework */,
 				9B7692672368D98E0075667C /* PassiveFaceLivenessSDK.framework */,
 				9B76925E2368D9850075667C /* FaceLiveness.framework */,
 				9B76925C2368D9850075667C /* XLPagerTabStrip.framework */,
@@ -403,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -450,13 +451,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -464,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -505,12 +508,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -521,7 +525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.9;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_TEAM = V5PYKXLWNH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -534,15 +538,16 @@
 					__IOS__,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/PALIDIN/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.palidin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = arm64;
 			};
@@ -554,7 +559,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.9;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_TEAM = V5PYKXLWNH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -563,15 +568,16 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = __IOS__;
 				INFOPLIST_FILE = "$(SRCROOT)/PALIDIN/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fraudfighter.palidin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = arm64;
 			};

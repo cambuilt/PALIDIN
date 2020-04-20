@@ -22,8 +22,19 @@ class ResultSummaryViewController: UIViewController, IndicatorInfoProvider {
     @IBOutlet weak var resultComplexView: UIView!
     
     @IBOutlet weak var facialMatchField: UILabel!
+    @IBOutlet weak var facialMatchValue: UILabel!
     @IBOutlet weak var facialMatchScoreField: UILabel!
+    @IBOutlet weak var facialMatchScoreValue: UILabel!
     @IBOutlet weak var documentReaderMatchField: UILabel!
+    @IBOutlet weak var documentReaderMatchValue: UILabel!
+    @IBOutlet weak var issuingStateCode: UILabel!
+    @IBOutlet weak var issuingStateCodeBarcode: UILabel!
+    @IBOutlet weak var documentNumber: UILabel!
+    @IBOutlet weak var documentNumberBarcode: UILabel!
+    @IBOutlet weak var documentNumberVisual: UILabel!
+    @IBOutlet weak var dateOfExpiry: UILabel!
+    @IBOutlet weak var dateOfExpiryBarcode: UILabel!
+    @IBOutlet weak var dateOfExpiryVisual: UILabel!
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: tabName)
@@ -47,13 +58,27 @@ class ResultSummaryViewController: UIViewController, IndicatorInfoProvider {
             }
             
             if let facialMatch = response.biometricsAuthenticationResult?.matchResult {
-                facialMatchField.text = "Facial Match: \(facialMatch)"
+                facialMatchValue.text = facialMatch == "OK" ? "✅" : "❌"
             }
             if let facialMatchScore = response.biometricsAuthenticationResult?.matchScore {
-                facialMatchScoreField.text = "Facial Match Score: \(facialMatchScore)"
+                facialMatchScoreValue.text = "\(facialMatchScore)"
             }
             if let documentMatch = response.documentAuthenticationResult?.overallResult {
-                documentReaderMatchField.text = "Document Reader Match: \(documentMatch)"
+                documentReaderMatchValue.text = documentMatch == "OK" ? "✅" : "❌"
+            }
+            if let isc = response.documentAuthenticationResult?.fieldType?[0] {
+                issuingStateCode.text = isc.name
+                issuingStateCodeBarcode.text = isc.fieldResult?.barcode
+            }
+            if let dn = response.documentAuthenticationResult?.fieldType?[1] {
+                documentNumber.text = dn.name
+                documentNumberBarcode.text = dn.fieldResult?.barcode
+                documentNumberVisual.text = dn.fieldResult?.visual
+            }
+            if let doe = response.documentAuthenticationResult?.fieldType?[2] {
+                dateOfExpiry.text = doe.name
+                dateOfExpiryBarcode.text = doe.fieldResult?.barcode
+                dateOfExpiryVisual.text = doe.fieldResult?.visual
             }
         }
     }
